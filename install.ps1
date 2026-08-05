@@ -9,7 +9,7 @@ $Channel = 'pilot'
 $ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/codex/v1-release-feed/releases/0.1.0-candidate/beschannels-ai-ops-0.1.0-candidate-windows-x64.zip'
 $ArchiveSha256 = '34C06326698009A83722889379AF6039F001DA18D9F86D3D1023337405126DC5'
 $ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/codex/v1-release-feed/releases/0.1.0-candidate/manifest.json'
-$ManifestSha256 = '1D22AECCC3A933188AA56EEDE525768E93BEC36F6A46BD0DF764A4C4AA4986AD'
+$ManifestSha256 = '1F4A00976BE51D253AF4BE1F38FDBE00B20788DDB7D6FAE8528248C906554E6A'
 $InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
     [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)
 } else {

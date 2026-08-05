@@ -128,8 +128,8 @@ function Test-ReleaseFiles([string]$Root, [object]$Manifest) {
 
 try {
     [IO.Directory]::CreateDirectory($TempRoot) | Out-Null
-    Invoke-Download $ArchiveUrl $ArchivePath
-    Invoke-Download $ManifestUrl $ManifestPath
+    Invoke-Download ($ArchiveUrl + '?sha=' + $ArchiveSha256) $ArchivePath
+    Invoke-Download ($ManifestUrl + '?sha=' + $ArchiveSha256) $ManifestPath
     if ((Get-FileSha256 $ArchivePath) -ne $ArchiveSha256) {
         throw '安装包 SHA256 校验失败。'
     }

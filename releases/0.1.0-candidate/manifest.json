@@ -1,6 +1,6 @@
 {
   "archive_sha256": "34C06326698009A83722889379AF6039F001DA18D9F86D3D1023337405126DC5",
-  "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/codex/v1-release-feed/releases/0.1.0-candidate/beschannels-ai-ops-0.1.0-candidate-windows-x64.zip",
+  "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate/releases/0.1.0-candidate/beschannels-ai-ops-0.1.0-candidate-windows-x64.zip",
   "files": [
     {
       "path": "bin/beschannels-ai.exe",
@@ -35,7 +35,7 @@
   ],
   "platform": "windows-x64",
   "product": "BesChannels AI Ops",
-  "published_at": "2026-08-05T09:42:55.144372Z",
+  "published_at": "2026-08-05T09:45:31.526478Z",
   "schema_version": 1,
   "version": "0.1.0-candidate"
 }

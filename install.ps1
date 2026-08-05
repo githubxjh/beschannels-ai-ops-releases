@@ -6,10 +6,10 @@ $ErrorActionPreference = 'Stop'
 
 $Version = '0.1.0-candidate'
 $Channel = 'pilot'
-$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/codex/v1-release-feed/releases/0.1.0-candidate/beschannels-ai-ops-0.1.0-candidate-windows-x64.zip'
+$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate/releases/0.1.0-candidate/beschannels-ai-ops-0.1.0-candidate-windows-x64.zip'
 $ArchiveSha256 = '34C06326698009A83722889379AF6039F001DA18D9F86D3D1023337405126DC5'
-$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/codex/v1-release-feed/releases/0.1.0-candidate/manifest.json'
-$ManifestSha256 = '1F4A00976BE51D253AF4BE1F38FDBE00B20788DDB7D6FAE8528248C906554E6A'
+$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate/releases/0.1.0-candidate/manifest.json'
+$ManifestSha256 = '003EFEE3D8A8511A511653D16F47D9C62BCF6B1C4C5389BC95273BC0CF986548'
 $InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
     [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)
 } else {

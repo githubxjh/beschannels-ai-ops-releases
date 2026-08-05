@@ -1,0 +1,2 @@
+algorithm=Ed25519
+public_key_base64=wKm0INKedVYUBe92T4cF8NZYNcoJW9OxEgqzXc84M48=

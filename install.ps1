@@ -4,12 +4,13 @@ param()
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$Version = '0.1.0-candidate.1'
+$Version = '0.1.0-candidate.2'
 $Channel = 'pilot'
-$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.1/releases/0.1.0-candidate.1/beschannels-ai-ops-0.1.0-candidate.1-windows-x64.zip'
-$ArchiveSha256 = '6B31C2A210A99956AC3AC7CAF0CB90EBC8FE2EB583CE1C2F26F1DED49B5B4DF4'
-$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.1/releases/0.1.0-candidate.1/manifest.json'
-$ManifestSha256 = '0702F6B867CDAD46C3BEEB8E1E4D4434855E3E6959D445030E41602434DD6888'
+$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.2/releases/0.1.0-candidate.2/beschannels-ai-ops-0.1.0-candidate.2-windows-x64.zip'
+$ArchiveSha256 = '538C570C0F59638CC5F04DF27CD4C8474EF64388490B43B4E798B7DAD403E4F3'
+$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.2/releases/0.1.0-candidate.2/manifest.json'
+$ManifestSha256 = '661DDB148475A622C42D48640490A85AF1F5DE4505121FD4ED192DEE7FCB35F2'
+$SignedChannelBase = $ManifestUrl.Substring(0, $ManifestUrl.IndexOf('/releases/')) + '/channels'
 $InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
     [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)
 } else {
@@ -31,7 +32,13 @@ if (Test-Path -LiteralPath $ExistingCurrentPath -PathType Leaf) {
     $existing = Get-Content -LiteralPath $ExistingCurrentPath -Raw -Encoding UTF8 | ConvertFrom-Json
     $existingExecutable = Join-Path $InstallRoot ([string]$existing.relative_path + '\bin\beschannels-ai.exe')
     if (Test-Path -LiteralPath $existingExecutable -PathType Leaf) {
-        $update = & $existingExecutable update --channel $Channel --output json | ConvertFrom-Json
+        $oldReleaseBase = $env:BESCHANNELS_AI_RELEASE_BASE_URL
+        try {
+            $env:BESCHANNELS_AI_RELEASE_BASE_URL = $SignedChannelBase
+            $update = & $existingExecutable update --channel $Channel --output json | ConvertFrom-Json
+        } finally {
+            $env:BESCHANNELS_AI_RELEASE_BASE_URL = $oldReleaseBase
+        }
         if (-not $update.ok) {
             throw '致趣 AI 工作台更新检查失败，现有版本保持不变。'
         }
@@ -188,10 +195,16 @@ try {
         throw '安装后 doctor 验证失败。'
     }
     $signedCheck = $null
-    for ($attempt = 1; $attempt -le 3; $attempt++) {
-        $signedCheck = & $Executable update --channel $Channel --output json | ConvertFrom-Json
-        if ($signedCheck.ok) { break }
-        Start-Sleep -Seconds (2 * $attempt)
+    $oldReleaseBase = $env:BESCHANNELS_AI_RELEASE_BASE_URL
+    try {
+        $env:BESCHANNELS_AI_RELEASE_BASE_URL = $SignedChannelBase
+        for ($attempt = 1; $attempt -le 3; $attempt++) {
+            $signedCheck = & $Executable update --channel $Channel --output json | ConvertFrom-Json
+            if ($signedCheck.ok) { break }
+            Start-Sleep -Seconds (2 * $attempt)
+        }
+    } finally {
+        $env:BESCHANNELS_AI_RELEASE_BASE_URL = $oldReleaseBase
     }
     if (-not $signedCheck.ok) {
         throw '安装包已落盘，但签名发布通道验证失败。'

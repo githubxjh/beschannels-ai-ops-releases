@@ -10,8 +10,16 @@ $ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-re
 $ArchiveSha256 = '34C06326698009A83722889379AF6039F001DA18D9F86D3D1023337405126DC5'
 $ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/codex/v1-release-feed/releases/0.1.0-candidate/manifest.json'
 $ManifestSha256 = '1D22AECCC3A933188AA56EEDE525768E93BEC36F6A46BD0DF764A4C4AA4986AD'
-$InstallRoot = Join-Path $env:LOCALAPPDATA 'Programs\BesChannelsAIOps'
-$SkillRoot = Join-Path $HOME '.codex\skills'
+$InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
+    [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)
+} else {
+    Join-Path $env:LOCALAPPDATA 'Programs\BesChannelsAIOps'
+}
+$SkillRoot = if ($env:BESCHANNELS_AI_SKILL_ROOT) {
+    [IO.Path]::GetFullPath($env:BESCHANNELS_AI_SKILL_ROOT)
+} else {
+    Join-Path $HOME '.codex\skills'
+}
 $Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $TempRoot = Join-Path ([IO.Path]::GetTempPath()) ('BesChannelsAIOps-' + [guid]::NewGuid().ToString('N'))
 $ArchivePath = Join-Path $TempRoot 'release.zip'

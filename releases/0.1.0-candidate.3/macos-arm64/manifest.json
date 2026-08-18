@@ -1,0 +1,46 @@
+{
+  "archive_sha256": "493DBBE54B60531F4BCB136F997DA13726DE2668FC4543C000A8B814B53C54BF",
+  "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.3/releases/0.1.0-candidate.3/macos-arm64/beschannels-ai-ops-0.1.0-candidate.3-macos-arm64.zip",
+  "files": [
+    {
+      "path": "bin/beschannels-ai",
+      "sha256": "624062C1C9242E20FE3FADC6164FF58BF4A62E7B90F44C14D629CA11E2ABD8CF",
+      "size": 8308080
+    },
+    {
+      "path": "skills/beschannels-ai-ops/SKILL.md",
+      "sha256": "E9DE8E3665F3C15B6A0EBF93D973261EE40268158B4E04404AF37CF84F9939C7",
+      "size": 4896
+    },
+    {
+      "path": "skills/beschannels-ai-ops/agents/openai.yaml",
+      "sha256": "FB0D1EE673478272C44383E3AA21C257C5529AD36400BBE64DAB468C9C5F3659",
+      "size": 347
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/capability-routing.md",
+      "sha256": "2257261643E44E468E57F2E8555C600CF3A91E27985DCD92E591BEA7C10783A0",
+      "size": 1713
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/runtime-contract.md",
+      "sha256": "89BD37ECB076F4A6EF8EC24C3C9010F72C7BD0DD9806DC9BC736AA0CF8259DC8",
+      "size": 2759
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
+      "sha256": "805CEB5A066477295CFB6AA9077944F1E562D23FE049B97D3911B7E40ED12D13",
+      "size": 1173
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.sh",
+      "sha256": "641A441FEA11A9AC6CB86CED3106E045197641BAC072ECD1D91A11C0402F6FB5",
+      "size": 916
+    }
+  ],
+  "platform": "macos-arm64",
+  "product": "BesChannels AI Ops",
+  "published_at": "2026-08-18T05:31:49.782387Z",
+  "schema_version": 1,
+  "version": "0.1.0-candidate.3"
+}

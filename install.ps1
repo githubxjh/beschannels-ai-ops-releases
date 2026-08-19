@@ -4,12 +4,12 @@ param()
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$Version = '0.1.0-candidate.5'
+$Version = '0.1.0-candidate.6'
 $Channel = 'pilot'
-$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.5/releases/0.1.0-candidate.5/beschannels-ai-ops-0.1.0-candidate.5-windows-x64.zip'
-$ArchiveSha256 = 'B1AFD3B83CEFFA85089CB2DF33F8C4D7B23CF87C27235CEF51D5B51036DFC8F4'
-$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.5/releases/0.1.0-candidate.5/manifest.json'
-$ManifestSha256 = '98BED47CFC8BE41B062BC9D9E149A14C4B28993BD6E1ED386BB9C4BBFA6F89E9'
+$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.6/releases/0.1.0-candidate.6/beschannels-ai-ops-0.1.0-candidate.6-windows-x64.zip'
+$ArchiveSha256 = 'EC680B331C9D5DADADDE56ED2A680AE7DBA36F9A69F614F60A5FA83A54C6F73E'
+$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.6/releases/0.1.0-candidate.6/manifest.json'
+$ManifestSha256 = '3E6309D8D79905024F15E79FE42D642AADC8F69D05AB652329A9D14741596FB0'
 $SignedChannelBase = $ManifestUrl.Substring(0, $ManifestUrl.IndexOf('/releases/')) + '/channels'
 $InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
     [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)
@@ -214,7 +214,12 @@ try {
         product_name = '致趣 AI 工作台'
         display_name = '致趣 AI 工作台·协作版'
         version = $Version
-        status = 'candidate_not_released'
+        status = switch ($Channel) {
+            'canary' { 'canary_released'; break }
+            'pilot' { 'pilot_released'; break }
+            'stable' { 'stable_released'; break }
+            default { 'candidate_not_released' }
+        }
     } | ConvertTo-Json -Compress
 } finally {
     if (Test-Path -LiteralPath $TempRoot) {

@@ -1,17 +1,17 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "0407E4161830A4AE844BF659335933F6DFA314A04B7E181EEC327001D04D2470",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.5/releases/0.1.0-candidate.5/macos-arm64/beschannels-ai-ops-0.1.0-candidate.5-macos-arm64.zip",
+    "archive_sha256": "4062EF7C256EF83CE9F24FE6B50193947127485C39E31EBE45B6F43128F07656",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.6/releases/0.1.0-candidate.6/macos-arm64/beschannels-ai-ops-0.1.0-candidate.6-macos-arm64.zip",
     "files": [
       {
         "path": "bin/beschannels-ai",
-        "sha256": "8126482775FF01771EF2D3219860A54E2B5FD31DB57C0B8FE2FC972624DE1092",
-        "size": 12315152
+        "sha256": "11F25B962C38BD8D81804BEDCB4F6D45F9A2413CB9817A34457E546FC23EB432",
+        "size": 12314496
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "D23DA5AB69A22E57C7430C63D7492F9140D352754FEAED1C68C0E9180FC0DBAA",
+        "sha256": "18DDFF37BE4953831CE3619A2BA696712B5B099C0032A874793BA063D53C466C",
         "size": 6770
       },
       {
@@ -42,10 +42,10 @@
     ],
     "platform": "macos-arm64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-08-19T04:17:31.997137Z",
+    "published_at": "2026-08-19T05:05:42.770334Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.5"
+    "version": "0.1.0-candidate.6"
   },
   "schema_version": 1,
-  "signature": "QRv2/88eAHesH3wRIUsoP0po1eR/lHnCNc7yUpLp0d9lzcZiSLMndtGxQU3JuXYh4HbIfVOLlbaZW61pjahzDQ=="
+  "signature": "5wbHtNs1TFozl/bzCnkQ5D1kzt+gDs+yRqoVi0ruDCbWhQMaDbskIdLVefVnj2/DD/tm/qo6nl9WzsJD5SRlDQ=="
 }

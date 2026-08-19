@@ -4,12 +4,12 @@ param()
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$Version = '0.1.0-candidate.3'
+$Version = '0.1.0-candidate.5'
 $Channel = 'pilot'
-$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.3/releases/0.1.0-candidate.3/beschannels-ai-ops-0.1.0-candidate.3-windows-x64.zip'
-$ArchiveSha256 = 'ADF5E8933573E030F3EE1A9BD6AB080F36E5686298A5347C67B335CD0E970F2B'
-$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.3/releases/0.1.0-candidate.3/manifest.json'
-$ManifestSha256 = '5D87C17F0565C5FB6C16D32DEA6F9E6DD044013780F9C327BDE021EDE8A09AF9'
+$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.5/releases/0.1.0-candidate.5/beschannels-ai-ops-0.1.0-candidate.5-windows-x64.zip'
+$ArchiveSha256 = 'B1AFD3B83CEFFA85089CB2DF33F8C4D7B23CF87C27235CEF51D5B51036DFC8F4'
+$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.5/releases/0.1.0-candidate.5/manifest.json'
+$ManifestSha256 = '98BED47CFC8BE41B062BC9D9E149A14C4B28993BD6E1ED386BB9C4BBFA6F89E9'
 $SignedChannelBase = $ManifestUrl.Substring(0, $ManifestUrl.IndexOf('/releases/')) + '/channels'
 $InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
     [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)
@@ -45,7 +45,7 @@ if (Test-Path -LiteralPath $ExistingCurrentPath -PathType Leaf) {
         @{
             ok = $true
             product_name = '致趣 AI 工作台'
-            display_name = '致趣 AI 工作台（试点版）'
+            display_name = '致趣 AI 工作台·协作版'
             version = $update.data.version
             status = $update.data.status
             update_deferred = ($update.data.status -eq 'update_deferred')
@@ -212,7 +212,7 @@ try {
     @{
         ok = $true
         product_name = '致趣 AI 工作台'
-        display_name = '致趣 AI 工作台（试点版）'
+        display_name = '致趣 AI 工作台·协作版'
         version = $Version
         status = 'candidate_not_released'
     } | ConvertTo-Json -Compress

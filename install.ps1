@@ -4,12 +4,12 @@ param()
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$Version = '0.1.0-candidate.3'
+$Version = '0.1.0-candidate.6'
 $Channel = 'pilot'
-$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.3/releases/0.1.0-candidate.3/beschannels-ai-ops-0.1.0-candidate.3-windows-x64.zip'
-$ArchiveSha256 = 'ADF5E8933573E030F3EE1A9BD6AB080F36E5686298A5347C67B335CD0E970F2B'
-$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.3/releases/0.1.0-candidate.3/manifest.json'
-$ManifestSha256 = '5D87C17F0565C5FB6C16D32DEA6F9E6DD044013780F9C327BDE021EDE8A09AF9'
+$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.6/releases/0.1.0-candidate.6/beschannels-ai-ops-0.1.0-candidate.6-windows-x64.zip'
+$ArchiveSha256 = 'EC680B331C9D5DADADDE56ED2A680AE7DBA36F9A69F614F60A5FA83A54C6F73E'
+$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.6/releases/0.1.0-candidate.6/manifest.json'
+$ManifestSha256 = '3E6309D8D79905024F15E79FE42D642AADC8F69D05AB652329A9D14741596FB0'
 $SignedChannelBase = $ManifestUrl.Substring(0, $ManifestUrl.IndexOf('/releases/')) + '/channels'
 $InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
     [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)
@@ -45,7 +45,7 @@ if (Test-Path -LiteralPath $ExistingCurrentPath -PathType Leaf) {
         @{
             ok = $true
             product_name = '致趣 AI 工作台'
-            display_name = '致趣 AI 工作台（试点版）'
+            display_name = '致趣 AI 工作台·协作版'
             version = $update.data.version
             status = $update.data.status
             update_deferred = ($update.data.status -eq 'update_deferred')
@@ -212,9 +212,14 @@ try {
     @{
         ok = $true
         product_name = '致趣 AI 工作台'
-        display_name = '致趣 AI 工作台（试点版）'
+        display_name = '致趣 AI 工作台·协作版'
         version = $Version
-        status = 'candidate_not_released'
+        status = switch ($Channel) {
+            'canary' { 'canary_released'; break }
+            'pilot' { 'pilot_released'; break }
+            'stable' { 'stable_released'; break }
+            default { 'candidate_not_released' }
+        }
     } | ConvertTo-Json -Compress
 } finally {
     if (Test-Path -LiteralPath $TempRoot) {

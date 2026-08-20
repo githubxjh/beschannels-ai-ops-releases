@@ -1,11 +1,8 @@
-# 致趣 AI 工作台（试点版）
+# 致趣 AI 工作台·协作版
 
-当前仅提供 Windows x64 Codex 内部候选安装包，状态为 `0.1.0-candidate.2 / candidate_not_released`。
+同事分享页使用下面两个长期入口；入口所在的 `pilot` 分支会随试点版本更新，飞书文档不需要每次改链接：
 
-同事只需把下面的安装入口链接粘贴到 Codex 对话，并说“请帮我安装致趣 AI 工作台”：
+- Windows：`https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/pilot/install.ps1`
+- macOS Apple Silicon：`https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/pilot/install.sh`
 
-```text
-https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.2/install.ps1
-```
-
-该候选不代表稳定版发布。正式推广需完成非作者盲测、业务审核和项目负责人批准。
+每个具体版本仍保留在 `releases/<version>/` 和对应版本 tag 中，用于回溯、哈希核对和问题复现。`pilot` 是试点渠道，不等于 stable 正式发布。

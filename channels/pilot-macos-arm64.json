@@ -1,18 +1,18 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "1379C3978F00BF2591FF370F113D31B63E416DDF97E48927D8B54F37C66795DB",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.9/releases/0.1.0-candidate.9/macos-arm64/beschannels-ai-ops-0.1.0-candidate.9-macos-arm64.zip",
+    "archive_sha256": "0D4FD339F5533D3D6B9D960B72BF98521230A4F5EEFC03CF9F67471E2EA7C4D4",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.10/releases/0.1.0-candidate.10/macos-arm64/beschannels-ai-ops-0.1.0-candidate.10-macos-arm64.zip",
     "files": [
       {
         "path": "bin/beschannels-ai",
-        "sha256": "3C7B5E658D700CF0B559E85751FA75B6F01BD40AE145612101EF8363EDA9896E",
-        "size": 12317376
+        "sha256": "1EE48D919C8112B945F394019DD66BBE70BD1679D18233EE9A76E88B09EA1412",
+        "size": 12316864
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "09C7A2AB64CDDB84EFB32A73C157BE788F190B47817AE9577DFD23C2AAEC1109",
-        "size": 7406
+        "sha256": "6193FF3214C2392B435E999309E9DD56632F0171B57C62D1906949B06207CD7E",
+        "size": 7542
       },
       {
         "path": "skills/beschannels-ai-ops/agents/openai.yaml",
@@ -21,8 +21,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/capability-routing.md",
-        "sha256": "4A6DB2E87BB7B2A223FD05ABD5D7D2644EC555F48A40E934CF35C91F8406B92C",
-        "size": 3523
+        "sha256": "9D961370CBA374287F6F43CFC658061E312EB298D271824D7BDC5CA688F7FA21",
+        "size": 3883
       },
       {
         "path": "skills/beschannels-ai-ops/references/form-taxonomy.md",
@@ -52,10 +52,10 @@
     ],
     "platform": "macos-arm64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-08-22T10:37:13.445147Z",
+    "published_at": "2026-08-22T12:05:45.046404Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.9"
+    "version": "0.1.0-candidate.10"
   },
   "schema_version": 1,
-  "signature": "blCf+uW7m8URxSnSIXr6Bcl7UqNwBwx5llVXB+gsTKB7fiHpIIGeWo+7MkTmB01ElDocsIPHshCuD1Z6eL0mBw=="
+  "signature": "B+5vty9550JQhyUbcQr75XmRyY4KNIZevIzoY70Q6Ko5kdEwzIq/E4ZmVSSQ3q5BrJcZk1kiiTFrmevfm9JEDg=="
 }

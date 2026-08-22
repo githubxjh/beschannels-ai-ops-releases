@@ -1,0 +1,56 @@
+{
+  "archive_sha256": "A31075C90F88EBC22EC446B830F69C231AADAA894CFC4663852957B32C57D32A",
+  "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.8/releases/0.1.0-candidate.8/beschannels-ai-ops-0.1.0-candidate.8-windows-x64.zip",
+  "files": [
+    {
+      "path": "bin/beschannels-ai.exe",
+      "sha256": "07ACD9FBA6ADD9641F1E9D693C2E78B2E49EEEB65B3C63FB638A7B280CD1AA8F",
+      "size": 12905441
+    },
+    {
+      "path": "skills/beschannels-ai-ops/SKILL.md",
+      "sha256": "FE7C92BEF16CF470669DF0C1EF221E7AACC06F1F88289D1EB763A555B5107EAF",
+      "size": 7471
+    },
+    {
+      "path": "skills/beschannels-ai-ops/agents/openai.yaml",
+      "sha256": "21A5849BED8490DF740C814BD072B881A0F5E375CAACDA5953657D36C2DD40B5",
+      "size": 346
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/capability-routing.md",
+      "sha256": "0CCDBC733863E42981A4B250BE8127CFB4188E3A69C146619D3DDAC9ECF2990B",
+      "size": 3547
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/form-taxonomy.md",
+      "sha256": "229B59C08CB4920C7EB91778D7D7F48A163F08200F01F81F933E8F7E6EBCAA81",
+      "size": 1369
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/interface-aware-training.md",
+      "sha256": "4066F1F4256808D87BA4AF0B96D94E96DB165F3C33DAF561EC87301FCB2826BD",
+      "size": 911
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/runtime-contract.md",
+      "sha256": "4BAFF4DB83DB16576AD17EF6D718351C12644AB09007241D461BB4A5A5BFFBFD",
+      "size": 5211
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
+      "sha256": "CA8476AB1C07180424DE4DEE6515F18796DFE347888D8F3891D43C70A1A80EB7",
+      "size": 1202
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.sh",
+      "sha256": "BB4178C603DDA1CF7A4332BBAB1BBFAB552AB00474E46A033DA15D7DD23DAF18",
+      "size": 942
+    }
+  ],
+  "platform": "windows-x64",
+  "product": "BesChannels AI Ops",
+  "published_at": "2026-08-22T10:12:39.090211Z",
+  "schema_version": 1,
+  "version": "0.1.0-candidate.8"
+}

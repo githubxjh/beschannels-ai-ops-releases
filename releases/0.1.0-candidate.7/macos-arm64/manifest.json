@@ -1,0 +1,51 @@
+{
+  "archive_sha256": "16CBE9AFD5B547C9E552DB45D7177E8C9D7CB75A24D10A9DC5343CFEDC537CA0",
+  "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.7/releases/0.1.0-candidate.7/macos-arm64/beschannels-ai-ops-0.1.0-candidate.7-macos-arm64.zip",
+  "files": [
+    {
+      "path": "bin/beschannels-ai",
+      "sha256": "347A2590481A38BA708984F794C29C6248042A8791E816629F717EAE6786CF2A",
+      "size": 12314144
+    },
+    {
+      "path": "skills/beschannels-ai-ops/SKILL.md",
+      "sha256": "D72AD25B3F4F30AB5929A643F8C9823303B825BAB510270BB55C5DC963F94BDC",
+      "size": 6770
+    },
+    {
+      "path": "skills/beschannels-ai-ops/agents/openai.yaml",
+      "sha256": "93BDB90033BB6111436E0B7B9BF3F8426F36C04003710F92E2E2805BBD01B4F8",
+      "size": 340
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/capability-routing.md",
+      "sha256": "EAD2041D66FFE2DFB2350D69D3ADC3565A302B9495E1863578657708D9A71F29",
+      "size": 2647
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/interface-aware-training.md",
+      "sha256": "4066F1F4256808D87BA4AF0B96D94E96DB165F3C33DAF561EC87301FCB2826BD",
+      "size": 911
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/runtime-contract.md",
+      "sha256": "0DF3FCB403329477DFA7E3676CB195CD7F719F7BF31B5C06B1E31F4E9710B070",
+      "size": 4352
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
+      "sha256": "805CEB5A066477295CFB6AA9077944F1E562D23FE049B97D3911B7E40ED12D13",
+      "size": 1173
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.sh",
+      "sha256": "641A441FEA11A9AC6CB86CED3106E045197641BAC072ECD1D91A11C0402F6FB5",
+      "size": 916
+    }
+  ],
+  "platform": "macos-arm64",
+  "product": "BesChannels AI Ops",
+  "published_at": "2026-08-22T05:01:00.944901Z",
+  "schema_version": 1,
+  "version": "0.1.0-candidate.7"
+}

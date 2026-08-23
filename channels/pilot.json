@@ -1,28 +1,28 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "837F12738134A9861187ED2FC96D1B7F87A54EE845D065E62D18689D31638989",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.13/releases/0.1.0-candidate.13/beschannels-ai-ops-0.1.0-candidate.13-windows-x64.zip",
+    "archive_sha256": "17D62F2E6746C06A619D9461C500C699CE464902AA3957788704EECC31949F91",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.14/releases/0.1.0-candidate.14/beschannels-ai-ops-0.1.0-candidate.14-windows-x64.zip",
     "files": [
       {
         "path": "bin/beschannels-ai.exe",
-        "sha256": "8BF227513792FC89EAC4B9104A8C157CEEDEE146CD22F394FCC73B0DB04D7C82",
-        "size": 16061937
+        "sha256": "2725F85523C0541648DC18CE11FEE549EE200C067EFBABE958BA649E6CFE149E",
+        "size": 12966140
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "259AAAD9EAD01B6777FB2B292678FEC0B207916955F20E80FB3A4AFFAF9849BC",
-        "size": 8613
+        "sha256": "B6E5EDDAFFD432230F77FF9B10430DF61F6078F632D126505D58FAD9FCF8F86D",
+        "size": 8620
       },
       {
         "path": "skills/beschannels-ai-ops/agents/openai.yaml",
-        "sha256": "B18C1D473AF9C249FFEDDAF752652762DB21312FDC739BA2FB42F681383E0143",
-        "size": 348
+        "sha256": "CC068EF437313EACA0A0ECA4B3B0C088DDDE2FF28FA5D353CA2D181476C03067",
+        "size": 349
       },
       {
         "path": "skills/beschannels-ai-ops/references/capability-routing.md",
-        "sha256": "0B63726C546729DE59E367F73CAC5BB4B24C5A636D69C8BD893C87C7D5F3CBB2",
-        "size": 4800
+        "sha256": "FCEEF1034126F77A527F06880EF97801833C0E86E192BDA23C0ACFFEB1160D9A",
+        "size": 4810
       },
       {
         "path": "skills/beschannels-ai-ops/references/environment-recovery.json",
@@ -41,13 +41,13 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/legacy-meeting-management.md",
-        "sha256": "0C632E6E8DB4E82F403AB224101F815EFEA740102ADFFC44DD531EDBCE180CDE",
-        "size": 1963
+        "sha256": "41CE1843C45B55DB5C52C552720B033CEE824D57AE68B6A5B4FB5952B5B41BC8",
+        "size": 1995
       },
       {
         "path": "skills/beschannels-ai-ops/references/runtime-contract.md",
-        "sha256": "1F1B2B08B5D13A4EA2CEEBD46D2569B5F922ED242585668A14AACD6AB5A16B13",
-        "size": 5622
+        "sha256": "8AA25D2D9164477A39591CAF94DE1AB192C0FAE99656905218194DD147742CD9",
+        "size": 5623
       },
       {
         "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
@@ -62,10 +62,10 @@
     ],
     "platform": "windows-x64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-08-23T09:08:11.997791Z",
+    "published_at": "2026-08-23T09:34:48.583815Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.13"
+    "version": "0.1.0-candidate.14"
   },
   "schema_version": 1,
-  "signature": "SdB+8mpipX87dw1dDQuFnhhW07qmLJyhsyRPDnj87ilF1DCKCcg3duF/vomkAd6NlcJ6atJfK6PNvzYlubqwAA=="
+  "signature": "NPYoApvv2zNkvjATqNttuirglPaZzcCZEreaTrzckgxSKM7KxXkAvfSV3MWvGKw7L8Gv2fYviaP6TGRJd/7SDw=="
 }

@@ -1,0 +1,66 @@
+{
+  "archive_sha256": "17D62F2E6746C06A619D9461C500C699CE464902AA3957788704EECC31949F91",
+  "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.14/releases/0.1.0-candidate.14/beschannels-ai-ops-0.1.0-candidate.14-windows-x64.zip",
+  "files": [
+    {
+      "path": "bin/beschannels-ai.exe",
+      "sha256": "2725F85523C0541648DC18CE11FEE549EE200C067EFBABE958BA649E6CFE149E",
+      "size": 12966140
+    },
+    {
+      "path": "skills/beschannels-ai-ops/SKILL.md",
+      "sha256": "B6E5EDDAFFD432230F77FF9B10430DF61F6078F632D126505D58FAD9FCF8F86D",
+      "size": 8620
+    },
+    {
+      "path": "skills/beschannels-ai-ops/agents/openai.yaml",
+      "sha256": "CC068EF437313EACA0A0ECA4B3B0C088DDDE2FF28FA5D353CA2D181476C03067",
+      "size": 349
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/capability-routing.md",
+      "sha256": "FCEEF1034126F77A527F06880EF97801833C0E86E192BDA23C0ACFFEB1160D9A",
+      "size": 4810
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/environment-recovery.json",
+      "sha256": "2FF3319445B38A329F323633AD26361A9861371294F0EEACE745914FD4D5170D",
+      "size": 926
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/form-taxonomy.md",
+      "sha256": "53041ECBA8CDD9688A686AFD24C485B362E864293962DD72B17D6B5D0657A343",
+      "size": 1403
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/interface-aware-training.md",
+      "sha256": "7AB81E6C0D3CD841D8314A075213B9CE66516BD9301D0100BC3182CFADB89723",
+      "size": 923
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/legacy-meeting-management.md",
+      "sha256": "41CE1843C45B55DB5C52C552720B033CEE824D57AE68B6A5B4FB5952B5B41BC8",
+      "size": 1995
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/runtime-contract.md",
+      "sha256": "8AA25D2D9164477A39591CAF94DE1AB192C0FAE99656905218194DD147742CD9",
+      "size": 5623
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
+      "sha256": "CA8476AB1C07180424DE4DEE6515F18796DFE347888D8F3891D43C70A1A80EB7",
+      "size": 1202
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.sh",
+      "sha256": "BB4178C603DDA1CF7A4332BBAB1BBFAB552AB00474E46A033DA15D7DD23DAF18",
+      "size": 942
+    }
+  ],
+  "platform": "windows-x64",
+  "product": "BesChannels AI Ops",
+  "published_at": "2026-08-23T09:34:48.583815Z",
+  "schema_version": 1,
+  "version": "0.1.0-candidate.14"
+}

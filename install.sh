@@ -1,12 +1,12 @@
 #!/bin/sh
 set -eu
 
-version='0.1.0-candidate.11'
+version='0.1.0-candidate.15'
 channel='pilot'
-archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.11/releases/0.1.0-candidate.11/macos-arm64/beschannels-ai-ops-0.1.0-candidate.11-macos-arm64.zip'
-archive_sha256='3A78968DAE4023B1961ED00ED315A08720E7758FF7834D34EB9B3E091ADCF04F'
-manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.11/releases/0.1.0-candidate.11/macos-arm64/manifest.json'
-manifest_sha256='D7D2ADADD2FA015B2602E435EC8EFD02038FC42695AC0B1269041F31A7525311'
+archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.15/releases/0.1.0-candidate.15/macos-arm64/beschannels-ai-ops-0.1.0-candidate.15-macos-arm64.zip'
+archive_sha256='66020C9A5EF76BBB70807A465BBB8B42D4E022332E6FE372E30F8BC56F1542A6'
+manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.15/releases/0.1.0-candidate.15/macos-arm64/manifest.json'
+manifest_sha256='F8D045CCBECF87C1E51FDA95AD94707F4511B98A9047C27A1C418707532CC2FC'
 install_root="${BESCHANNELS_AI_HOME:-$HOME/Library/Application Support/BesChannelsAIOps/runtime}"
 skill_root="${BESCHANNELS_AI_SKILL_ROOT:-$HOME/.codex/skills}"
 temp_root=$(mktemp -d "${TMPDIR:-/tmp}/BesChannelsAIOps.XXXXXX")

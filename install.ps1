@@ -42,15 +42,18 @@ if (Test-Path -LiteralPath $ExistingCurrentPath -PathType Leaf) {
         if (-not $update.ok) {
             throw '致趣 AI 工作台更新检查失败，现有版本保持不变。'
         }
-        @{
-            ok = $true
-            product_name = '致趣 AI 工作台'
-            display_name = '致趣 AI 工作台·协作版'
-            version = $update.data.version
-            status = $update.data.status
-            update_deferred = ($update.data.status -eq 'update_deferred')
-        } | ConvertTo-Json -Compress
-        return
+        if ($update.data.status -ne 'update_deferred') {
+            @{
+                ok = $true
+                product_name = '致趣 AI 工作台'
+                display_name = '致趣 AI 工作台·协作版'
+                version = $update.data.version
+                status = $update.data.status
+                update_deferred = $false
+            } | ConvertTo-Json -Compress
+            return
+        }
+        # Older clients may defer because of a stale run; continue with the signed installer below.
     }
 }
 

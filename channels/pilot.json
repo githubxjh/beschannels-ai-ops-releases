@@ -1,17 +1,17 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "9E70984753322AD5BBFB52C2084B33968EF5851080BD07AC3F8804D89C7F63B3",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.15/releases/0.1.0-candidate.15/beschannels-ai-ops-0.1.0-candidate.15-windows-x64.zip",
+    "archive_sha256": "DFC4ACA40FB326222A13972E39AAE50094F85BD93FB8B79776062CE04D1AB8B6",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.16/releases/0.1.0-candidate.16/beschannels-ai-ops-0.1.0-candidate.16-windows-x64.zip",
     "files": [
       {
         "path": "bin/beschannels-ai.exe",
-        "sha256": "FBC2D4225678424211A1851D5DC117DDC6F039C47E357588EC447D5017A91D63",
-        "size": 12960596
+        "sha256": "5696F3F0DD541411F6541C36E5A48B1701CB39540E52AF3068F77AFCD06A34A9",
+        "size": 12962237
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "68AF6648C6A630437B30879C401D421E8F110D8628540A63E4501860974B57E2",
+        "sha256": "7009A4186DC5DB6150490D70EFB35E33058AC2F68BDCC056680D125AB780F451",
         "size": 8947
       },
       {
@@ -47,10 +47,10 @@
     ],
     "platform": "windows-x64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-08-23T12:06:24.572516Z",
+    "published_at": "2026-08-23T12:22:21.116366Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.15"
+    "version": "0.1.0-candidate.16"
   },
   "schema_version": 1,
-  "signature": "vaMn8RGtddGdsEGGkYIz+Z1IdZjfUxmwDTCpWdXgyur6C5XYcmJfMjyZRbKM9z1Wb5FPjJfgyvNC+19n29pmCg=="
+  "signature": "Rmbcum+iW/zhCettVAJ4xhM1nh5x03FciLcWq6jRhCCcx1Vcx9fAEZzjimLnskcrg8gbnBvKZ8A2R5c9rysfBg=="
 }

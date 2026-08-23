@@ -1,0 +1,51 @@
+{
+  "archive_sha256": "DFC4ACA40FB326222A13972E39AAE50094F85BD93FB8B79776062CE04D1AB8B6",
+  "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.16/releases/0.1.0-candidate.16/beschannels-ai-ops-0.1.0-candidate.16-windows-x64.zip",
+  "files": [
+    {
+      "path": "bin/beschannels-ai.exe",
+      "sha256": "5696F3F0DD541411F6541C36E5A48B1701CB39540E52AF3068F77AFCD06A34A9",
+      "size": 12962237
+    },
+    {
+      "path": "skills/beschannels-ai-ops/SKILL.md",
+      "sha256": "7009A4186DC5DB6150490D70EFB35E33058AC2F68BDCC056680D125AB780F451",
+      "size": 8947
+    },
+    {
+      "path": "skills/beschannels-ai-ops/agents/openai.yaml",
+      "sha256": "21A5849BED8490DF740C814BD072B881A0F5E375CAACDA5953657D36C2DD40B5",
+      "size": 346
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/capability-routing.md",
+      "sha256": "8E621297F44D76636C9D16262D000EDAF2D6A76535D65ED82ED4A6A210355AE4",
+      "size": 3029
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/environment-recovery.json",
+      "sha256": "2FF3319445B38A329F323633AD26361A9861371294F0EEACE745914FD4D5170D",
+      "size": 926
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/runtime-contract.md",
+      "sha256": "72EAEAE33F357A6BD0FADD6E96A7430D70BC35A2900B29D4E8471DAB05ABAF87",
+      "size": 4774
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
+      "sha256": "CA8476AB1C07180424DE4DEE6515F18796DFE347888D8F3891D43C70A1A80EB7",
+      "size": 1202
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.sh",
+      "sha256": "BB4178C603DDA1CF7A4332BBAB1BBFAB552AB00474E46A033DA15D7DD23DAF18",
+      "size": 942
+    }
+  ],
+  "platform": "windows-x64",
+  "product": "BesChannels AI Ops",
+  "published_at": "2026-08-23T12:22:21.116366Z",
+  "schema_version": 1,
+  "version": "0.1.0-candidate.16"
+}

@@ -4,12 +4,12 @@ param()
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$Version = '0.1.0-candidate.17'
+$Version = '0.1.0-candidate.18'
 $Channel = 'pilot'
-$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.17/releases/0.1.0-candidate.17/beschannels-ai-ops-0.1.0-candidate.17-windows-x64.zip'
-$ArchiveSha256 = '249CE3820EE94CEFB8CB8345A9CF443D1E11B19D4564144ACE97166583580870'
-$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.17/releases/0.1.0-candidate.17/manifest.json'
-$ManifestSha256 = 'D29F357E6F2229E7847F63E5ED84296E847DE9A8A024EE71B94B65F869DF3EC2'
+$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.18/releases/0.1.0-candidate.18/beschannels-ai-ops-0.1.0-candidate.18-windows-x64.zip'
+$ArchiveSha256 = '7CB746A63CDD571163339346D33105870D3D3E360FA26B24EC9E386F3378FE88'
+$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.18/releases/0.1.0-candidate.18/manifest.json'
+$ManifestSha256 = '6491A618F3634FD157337B9AD00ED315E2C3EF112305CD73CF8715CE877D7521'
 $SignedChannelBase = $ManifestUrl.Substring(0, $ManifestUrl.IndexOf('/releases/')) + '/channels'
 $InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
     [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)

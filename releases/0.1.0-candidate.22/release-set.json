@@ -1,0 +1,88 @@
+{
+  "channel": "pilot",
+  "files": [
+    {
+      "path": "channels/pilot-macos-arm64.json",
+      "sha256": "F5C7F9A179A429998B6FFEBA35CA244D362C67D3DF320D832B8BE78CC82B9F54",
+      "size": 2203
+    },
+    {
+      "path": "channels/pilot.json",
+      "sha256": "FC32F2B4FC23A43CAA49BCC847D5EE1174E14E40F35E44121A5F75C33A671C8C",
+      "size": 2195
+    },
+    {
+      "path": "install.ps1",
+      "sha256": "83AA3601CA76085BF20377E97573707460666D1281FCEBD61CDA6A80BAD04BE1",
+      "size": 10111
+    },
+    {
+      "path": "install.sh",
+      "sha256": "1C180C4C66D7D084A6F6B77823E17D4B2C09319BA158B87DE375A98B81B550C2",
+      "size": 5595
+    },
+    {
+      "path": "releases/0.1.0-candidate.22/SHA256SUMS.txt",
+      "sha256": "0E00C2C9293128322ED60D69D137938588090CFC5CA9F997EB94DD9D676B4636",
+      "size": 200
+    },
+    {
+      "path": "releases/0.1.0-candidate.22/beschannels-ai-ops-0.1.0-candidate.22-windows-x64.zip",
+      "sha256": "43A44363DF3D35B5C29DE670879CA5E42B9CE51DA48A4D32E7DB6B5F7FA316F2",
+      "size": 12797127
+    },
+    {
+      "path": "releases/0.1.0-candidate.22/macos-arm64/SHA256SUMS.txt",
+      "sha256": "88CDBFFE0B55C1132412E690DA1DD6BA067370F025276B3164CD9BAAF3FE2A44",
+      "size": 200
+    },
+    {
+      "path": "releases/0.1.0-candidate.22/macos-arm64/beschannels-ai-ops-0.1.0-candidate.22-macos-arm64.zip",
+      "sha256": "82FD7F5135834BFC8FC843B078A04C1E4AF2D40537B86A0873B731A4924606EE",
+      "size": 12184309
+    },
+    {
+      "path": "releases/0.1.0-candidate.22/macos-arm64/manifest.json",
+      "sha256": "C1273968D69BE72774AF2F69CD98374DB3AD32E65ADEB884C0B795C361192CAA",
+      "size": 1933
+    },
+    {
+      "path": "releases/0.1.0-candidate.22/macos-arm64/manifest.sig",
+      "sha256": "97037ED42DA3C409A46114CA02150350B43ECB5D50860C57976E4CDD01716615",
+      "size": 89
+    },
+    {
+      "path": "releases/0.1.0-candidate.22/manifest.json",
+      "sha256": "9536DA2A3D5DEDBD62F6B06D8231AFE4E5A6D36AD03FB30E3B732D3EF85497BB",
+      "size": 1925
+    },
+    {
+      "path": "releases/0.1.0-candidate.22/manifest.sig",
+      "sha256": "97D8C9071B331360F22D9825F27D83DC34FA9445C235CE9D13727304FA636BD4",
+      "size": 89
+    }
+  ],
+  "platforms": [
+    {
+      "archive_file": "releases/0.1.0-candidate.22/beschannels-ai-ops-0.1.0-candidate.22-windows-x64.zip",
+      "channel_file": "channels/pilot.json",
+      "manifest_file": "releases/0.1.0-candidate.22/manifest.json",
+      "platform": "windows-x64"
+    },
+    {
+      "archive_file": "releases/0.1.0-candidate.22/macos-arm64/beschannels-ai-ops-0.1.0-candidate.22-macos-arm64.zip",
+      "channel_file": "channels/pilot-macos-arm64.json",
+      "manifest_file": "releases/0.1.0-candidate.22/macos-arm64/manifest.json",
+      "platform": "macos-arm64"
+    }
+  ],
+  "product": "BesChannels AI Ops",
+  "required_platforms": [
+    "windows-x64",
+    "macos-arm64"
+  ],
+  "schema_version": 1,
+  "sealed_at": "2026-08-30T03:11:34.042405Z",
+  "source_sha": "f678d207cffd1b7b8a44a8787e75432620c0735f",
+  "version": "0.1.0-candidate.22"
+}

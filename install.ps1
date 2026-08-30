@@ -4,12 +4,12 @@ param()
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$Version = '0.1.0-candidate.21'
+$Version = '0.1.0-candidate.23'
 $Channel = 'pilot'
-$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.21/releases/0.1.0-candidate.21/beschannels-ai-ops-0.1.0-candidate.21-windows-x64.zip'
-$ArchiveSha256 = 'C0483821809C1E69CBAB6D0C66C80AA53C403282DD2EF1F49680E9676278998B'
-$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.21/releases/0.1.0-candidate.21/manifest.json'
-$ManifestSha256 = '0114C121BDC2E264E5230E451381C721A18E79B72285ADFCA4DC57F4B2F91CEA'
+$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.23/releases/0.1.0-candidate.23/beschannels-ai-ops-0.1.0-candidate.23-windows-x64.zip'
+$ArchiveSha256 = '82425C446D5F04E835D99147ABA854EFECF8E2B47A6B02E0F3444D181608DCDC'
+$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.23/releases/0.1.0-candidate.23/manifest.json'
+$ManifestSha256 = '7314516385C5489A2116E3F152C8A38A4EE58D60D54E48FE1A6066842F78BC1B'
 $SignedChannelBase = $ManifestUrl.Substring(0, $ManifestUrl.IndexOf('/releases/')) + '/channels'
 $InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
     [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)
@@ -159,7 +159,20 @@ try {
     if (Test-Path -LiteralPath $Target) {
         Test-ReleaseFiles $Target $manifest
     } else {
-        [IO.Directory]::Move($Staging, $Target)
+        # The download temp directory and the configured install root may be on
+        # different Windows volumes. Copy into a verified same-volume stage,
+        # then keep the final directory switch atomic.
+        $ActivationStage = Join-Path $VersionsRoot ('.activation-' + $Version + '-' + [guid]::NewGuid().ToString('N'))
+        try {
+            [IO.Directory]::CreateDirectory($ActivationStage) | Out-Null
+            Get-ChildItem -LiteralPath $Staging -Force | Copy-Item -Destination $ActivationStage -Recurse -Force
+            Test-ReleaseFiles $ActivationStage $manifest
+            [IO.Directory]::Move($ActivationStage, $Target)
+        } finally {
+            if (Test-Path -LiteralPath $ActivationStage) {
+                Remove-Item -LiteralPath $ActivationStage -Recurse -Force
+            }
+        }
     }
 
     [IO.Directory]::CreateDirectory($SkillRoot) | Out-Null

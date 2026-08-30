@@ -1,12 +1,19 @@
 #!/bin/sh
 set -eu
 
-version='0.1.0-candidate.16'
+version='0.1.0-candidate.23'
 channel='pilot'
-archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.16/releases/0.1.0-candidate.16/macos-arm64/beschannels-ai-ops-0.1.0-candidate.16-macos-arm64.zip'
-archive_sha256='2171FD2D1732997769F3E7A5AE32D1016A6DE7DE4079B7B7BB8D9FCE691CCD75'
-manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.16/releases/0.1.0-candidate.16/macos-arm64/manifest.json'
-manifest_sha256='57CF5D00BF13A6DE5DD97FE8E8F40E2014BCFA9CD95A640ABF99A34BD5DA949E'
+archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.23/releases/0.1.0-candidate.23/macos-arm64/beschannels-ai-ops-0.1.0-candidate.23-macos-arm64.zip'
+archive_sha256='19C41C22065974BE187DF76B73A549A10DD0A80873C5AA2D367129BCE0333ED3'
+manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.23/releases/0.1.0-candidate.23/macos-arm64/manifest.json'
+manifest_sha256='FA7577FDE98182739B4736B088EAF7DD66319FFF6A6E43395ABC7556D4DFAD30'
+case "$manifest_url" in
+  */releases/*) signed_channel_base="${manifest_url%%/releases/*}/channels" ;;
+  *)
+    printf '%s\n' '{"ok":false,"error":{"code":"invalid_manifest_url","message":"发布清单地址缺少版本路径。"}}'
+    exit 2
+    ;;
+esac
 install_root="${BESCHANNELS_AI_HOME:-$HOME/Library/Application Support/BesChannelsAIOps/runtime}"
 skill_root="${BESCHANNELS_AI_SKILL_ROOT:-$HOME/.codex/skills}"
 temp_root=$(mktemp -d "${TMPDIR:-/tmp}/BesChannelsAIOps.XXXXXX")
@@ -113,6 +120,6 @@ SH
 chmod 755 "$HOME/.local/bin/beschannels-ai"
 
 doctor=$($HOME/.local/bin/beschannels-ai doctor --output json)
-signed_check=$($HOME/.local/bin/beschannels-ai update --channel "$channel" --output json)
+signed_check=$(BESCHANNELS_AI_RELEASE_BASE_URL="$signed_channel_base" "$HOME/.local/bin/beschannels-ai" update --channel "$channel" --output json)
 printf '%s\n' "$doctor"
 printf '%s\n' "$signed_check"

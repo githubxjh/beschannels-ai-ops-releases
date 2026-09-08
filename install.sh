@@ -1,12 +1,12 @@
 #!/bin/sh
 set -eu
 
-version='0.1.0-candidate.24'
+version='0.1.0-candidate.27'
 channel='pilot'
-archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.24/releases/0.1.0-candidate.24/macos-arm64/beschannels-ai-ops-0.1.0-candidate.24-macos-arm64.zip'
-archive_sha256='812272756468A626C3F77E86B9A73AEB7432B10EFED4D7C901E6217326A9592C'
-manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.24/releases/0.1.0-candidate.24/macos-arm64/manifest.json'
-manifest_sha256='85D424ADF5DD2B78C8813977A7006EA9CFD348D2DA31996EBC1F47019D02E782'
+archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.27/releases/0.1.0-candidate.27/macos-arm64/beschannels-ai-ops-0.1.0-candidate.27-macos-arm64.zip'
+archive_sha256='C6EEC48C851B8DB6C360DE91596FDD6E093E47A1FD540E7C02C265DFCD748DE5'
+manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.27/releases/0.1.0-candidate.27/macos-arm64/manifest.json'
+manifest_sha256='1A475BCB547C5026A06E71A9CD9A56E8B13035987179B2DB8A399EB0F8CA39E6'
 case "$manifest_url" in
   */releases/*) signed_channel_base="${manifest_url%%/releases/*}/channels" ;;
   *)

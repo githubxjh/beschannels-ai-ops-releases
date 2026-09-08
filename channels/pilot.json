@@ -1,18 +1,18 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "E2A44666B1B832A7B4ED7A046D83A24A7BAB78C70627049BBE552B4595600038",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.24/releases/0.1.0-candidate.24/beschannels-ai-ops-0.1.0-candidate.24-windows-x64.zip",
+    "archive_sha256": "4C1965C3A32A6A055C0356C2F42CA4BEE93C5004ED42E3D07BB0406FF26BCBBB",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.27/releases/0.1.0-candidate.27/beschannels-ai-ops-0.1.0-candidate.27-windows-x64.zip",
     "files": [
       {
         "path": "bin/beschannels-ai.exe",
-        "sha256": "D63792F981E8120D4EAE8EA5E239EE45554BDF87DB612BC2DAA615EBD28C0BA8",
-        "size": 12979154
+        "sha256": "89E7F3ECBD8CA0E3FFD850055A3BDA2054CD01F55AB6C85456485FB14C155428",
+        "size": 12999065
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "96972872380ABF6CA690F43B3FBFD6FBD766D0E32417D5A5E7051BD3B36737DC",
-        "size": 10383
+        "sha256": "2B9A326C535F037D6035CE22B96BF06DF6F4BFCB065BA8AD88587F81F6B997C8",
+        "size": 11257
       },
       {
         "path": "skills/beschannels-ai-ops/agents/openai.yaml",
@@ -21,13 +21,23 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/adopted-contracts.json",
-        "sha256": "F1BBBA96BFFACA581AFD9639E30512A831854ADE9672C212CF5B94CDCF3765A9",
-        "size": 9773
+        "sha256": "724B214016C493A18AED629C03D03D261B4DF461C4DC6926AF3831B8ADD018F3",
+        "size": 11567
+      },
+      {
+        "path": "skills/beschannels-ai-ops/references/browser-frames.md",
+        "sha256": "FF0BEEE67DDC88C4991E82A54A70EBDC9FD13BD7C8CFFBFD1930623641121C34",
+        "size": 2635
       },
       {
         "path": "skills/beschannels-ai-ops/references/capability-routing.md",
-        "sha256": "6C8BB524E00F015D38B3DDE924F1EA542BB88DF872E0283F3E6608CE53EB2945",
-        "size": 5624
+        "sha256": "EF4FF01CCE0CD10EDED00482D56F51BE3B5F046A9DE0172E21BFFC976BF58910",
+        "size": 6086
+      },
+      {
+        "path": "skills/beschannels-ai-ops/references/display-pages.md",
+        "sha256": "6664332BAD705780384ED5F58B2A8561412B9E33CC6C5BA4B34E064460636742",
+        "size": 13475
       },
       {
         "path": "skills/beschannels-ai-ops/references/environment-recovery.json",
@@ -40,9 +50,29 @@
         "size": 3255
       },
       {
+        "path": "skills/beschannels-ai-ops/references/import-reminders.md",
+        "sha256": "E2A0221E3A1DBE9A5E3B039AD354DEA9CB6DE20B5D1024D017C45F3AB2716713",
+        "size": 987
+      },
+      {
+        "path": "skills/beschannels-ai-ops/references/legacy-material-categories.md",
+        "sha256": "892B9B5E8081D78B0CF76CE2E5645855DEA13313DFCE1DC217767D9ACB5EEFD4",
+        "size": 3662
+      },
+      {
         "path": "skills/beschannels-ai-ops/references/runtime-contract.md",
         "sha256": "9D6D94D12FAE415AE1F97048718F79C1878BA26DEA618849988C19BFDB09A7B5",
         "size": 6204
+      },
+      {
+        "path": "skills/beschannels-ai-ops/references/tag-rule-creation.md",
+        "sha256": "AA679BCF8F2BA89C9B21F9C30201474D830013B51ED33633075AF1636E32A04C",
+        "size": 3500
+      },
+      {
+        "path": "skills/beschannels-ai-ops/scripts/browser-frame.mjs",
+        "sha256": "C8BB05A4D9B43826D04535F440D6BDFDD2D9011FE2D5AB8C7FFABCC9412A516B",
+        "size": 7532
       },
       {
         "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
@@ -57,10 +87,10 @@
     ],
     "platform": "windows-x64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-08-30T05:52:29.012109Z",
+    "published_at": "2026-09-08T10:55:36.771559Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.24"
+    "version": "0.1.0-candidate.27"
   },
   "schema_version": 1,
-  "signature": "QISlqeYopvNlerAX6lGzBQ9fTOXR37mb/N327KDu2oCnGJy+6zG2WhV7hQr2a+mrbPeilHaXJJVE02ZIwRBVAA=="
+  "signature": "mOGZnXWK37uzXOlWetVBIHaLtidIdF8oMUiJF4bBhATwZYx4IXXbO16zjIAxYfqYT28vB0RbHauQd6eQITpWCQ=="
 }

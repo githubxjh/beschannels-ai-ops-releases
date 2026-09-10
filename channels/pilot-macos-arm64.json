@@ -1,33 +1,43 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "812272756468A626C3F77E86B9A73AEB7432B10EFED4D7C901E6217326A9592C",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.24/releases/0.1.0-candidate.24/macos-arm64/beschannels-ai-ops-0.1.0-candidate.24-macos-arm64.zip",
+    "archive_sha256": "7C84F8599968474EA316F0066CFDEBFEC4CDB131059E1376A3E64B5EE5FB6A57",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.28/releases/0.1.0-candidate.28/macos-arm64/beschannels-ai-ops-0.1.0-candidate.28-macos-arm64.zip",
     "files": [
       {
         "path": "bin/beschannels-ai",
-        "sha256": "5200DAE18E4F50223C6A10B39371929A782F92C563EEF31B03B7DBE46114F38C",
-        "size": 12335600
+        "sha256": "CFBF826FE8B89DBD30E2230A49F631B4DF898ADD36FB2B75BC1D993C87A70F70",
+        "size": 12361120
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "617FE1EB806669982F986CA890CAC5A927D7A4962517171BC70D89714B892156",
-        "size": 10296
+        "sha256": "379902340A7D0C897212662B59CF87DE97F254A14D1307FD6A7D752AB1AAE207",
+        "size": 11263
       },
       {
         "path": "skills/beschannels-ai-ops/agents/openai.yaml",
-        "sha256": "8F319F569F1F67E17F2A36B6FE756C420F8B2B409A254E353A65A73815ACBD9F",
-        "size": 412
+        "sha256": "A43EA20CA18FC0922B428A7424622042FB29B8279435D440AB79C6211440B975",
+        "size": 428
       },
       {
         "path": "skills/beschannels-ai-ops/references/adopted-contracts.json",
-        "sha256": "F1BBBA96BFFACA581AFD9639E30512A831854ADE9672C212CF5B94CDCF3765A9",
-        "size": 9773
+        "sha256": "724B214016C493A18AED629C03D03D261B4DF461C4DC6926AF3831B8ADD018F3",
+        "size": 11567
+      },
+      {
+        "path": "skills/beschannels-ai-ops/references/browser-frames.md",
+        "sha256": "7C487E657FF2289E20F634B58BF26BFD19470E7A0077F6013B5B79D339E1B968",
+        "size": 2618
       },
       {
         "path": "skills/beschannels-ai-ops/references/capability-routing.md",
-        "sha256": "0833D1664AFFC0D58F69FCA05B5F6C788925B6EB109676288991A9C8BB5B399C",
-        "size": 5562
+        "sha256": "852697A809DF85922351AF71CA2A4BD78EDEF572F88952B86118ED9B6374CD6F",
+        "size": 6127
+      },
+      {
+        "path": "skills/beschannels-ai-ops/references/display-pages.md",
+        "sha256": "E046209A2E410800E5386D5A56A7FEA10DAFB30015900E8C0C33CA9D194AD685",
+        "size": 13008
       },
       {
         "path": "skills/beschannels-ai-ops/references/environment-recovery.json",
@@ -40,9 +50,29 @@
         "size": 3194
       },
       {
+        "path": "skills/beschannels-ai-ops/references/import-reminders.md",
+        "sha256": "04FCE2066E5EF330DD83A4FBDC934D40A54BD85E2DD240AC0E57085044AE8F17",
+        "size": 978
+      },
+      {
+        "path": "skills/beschannels-ai-ops/references/legacy-material-categories.md",
+        "sha256": "B4E338EA3D7EDB5DC2B32D82C81214BC4D5AE6D70EF9372C8E7F532F749BDBA7",
+        "size": 3635
+      },
+      {
         "path": "skills/beschannels-ai-ops/references/runtime-contract.md",
-        "sha256": "F43F55C45BB03ADFFD7C8128F09A1F8979DD8223A1BB0E8163F125E2CE08DAE8",
+        "sha256": "C4B143FE70A2DD50ABBCE47075C549963DE75E0A7554F855CE72CCADFDF34674",
         "size": 6123
+      },
+      {
+        "path": "skills/beschannels-ai-ops/references/tag-rule-creation.md",
+        "sha256": "2B3207718A151A873A53D161F71EB5EB4EA80E0AF41CAB3134D320EF33A051F5",
+        "size": 3471
+      },
+      {
+        "path": "skills/beschannels-ai-ops/scripts/browser-frame.mjs",
+        "sha256": "7FB9A96FC47FDDF2AABF382021DC74EED1BFD7EE0DE00135F3240E1D4AD3B109",
+        "size": 7387
       },
       {
         "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
@@ -57,10 +87,10 @@
     ],
     "platform": "macos-arm64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-08-30T05:52:30.048761Z",
+    "published_at": "2026-09-10T08:48:00.216209Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.24"
+    "version": "0.1.0-candidate.28"
   },
   "schema_version": 1,
-  "signature": "sstsoW4IjpTBJlVmU4CBmjLpoatAhz9LXcMb9Kg2Z+wEhmO2fcBY06QSVGB5zUfjqpHYIcpBae3Eg80njW4JCA=="
+  "signature": "NwFghWq3jdPFCgnfksduVnRAtoY7ZORdZKOd05AWzHjeA71E24fj4J1vqZQzvAL3guAN6eL9TwZhxJXvncc5CQ=="
 }

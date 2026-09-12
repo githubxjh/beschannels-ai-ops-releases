@@ -1,0 +1,91 @@
+{
+  "archive_sha256": "E11CCBE22A05236DD4E857ED79D0B18B3039EB2BBA06E9027152B4E0A7E1764D",
+  "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/macos-arm64/beschannels-ai-ops-0.1.0-candidate.29-macos-arm64.zip",
+  "files": [
+    {
+      "path": "bin/beschannels-ai",
+      "sha256": "28C9A5D2907DB5F71FE6ECC31B57BCAFEC70AC97B6E07E3BC93A2FA2D92254CC",
+      "size": 12524048
+    },
+    {
+      "path": "skills/beschannels-ai-ops/SKILL.md",
+      "sha256": "132288D3DD302F45A699467B49B4434D6FC7933100EAC79B65B720206928523B",
+      "size": 11264
+    },
+    {
+      "path": "skills/beschannels-ai-ops/agents/openai.yaml",
+      "sha256": "A43EA20CA18FC0922B428A7424622042FB29B8279435D440AB79C6211440B975",
+      "size": 428
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/adopted-contracts.json",
+      "sha256": "724B214016C493A18AED629C03D03D261B4DF461C4DC6926AF3831B8ADD018F3",
+      "size": 11567
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/browser-frames.md",
+      "sha256": "7C487E657FF2289E20F634B58BF26BFD19470E7A0077F6013B5B79D339E1B968",
+      "size": 2618
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/capability-routing.md",
+      "sha256": "852697A809DF85922351AF71CA2A4BD78EDEF572F88952B86118ED9B6374CD6F",
+      "size": 6127
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/display-pages.md",
+      "sha256": "E046209A2E410800E5386D5A56A7FEA10DAFB30015900E8C0C33CA9D194AD685",
+      "size": 13008
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/environment-recovery.json",
+      "sha256": "F3E5254FB159ED03BD1A2D585F2A0200DBC17D1299FB4499A2CE3AC20D7BC2D7",
+      "size": 910
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/form-taxonomy.md",
+      "sha256": "EEA21AC5AECD72B189CAD41FAA81D0F2990ED85A47B2F73F8822ECAD8C828E63",
+      "size": 3194
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/import-reminders.md",
+      "sha256": "04FCE2066E5EF330DD83A4FBDC934D40A54BD85E2DD240AC0E57085044AE8F17",
+      "size": 978
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/legacy-material-categories.md",
+      "sha256": "B4E338EA3D7EDB5DC2B32D82C81214BC4D5AE6D70EF9372C8E7F532F749BDBA7",
+      "size": 3635
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/runtime-contract.md",
+      "sha256": "C4B143FE70A2DD50ABBCE47075C549963DE75E0A7554F855CE72CCADFDF34674",
+      "size": 6123
+    },
+    {
+      "path": "skills/beschannels-ai-ops/references/tag-rule-creation.md",
+      "sha256": "2B3207718A151A873A53D161F71EB5EB4EA80E0AF41CAB3134D320EF33A051F5",
+      "size": 3471
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/browser-frame.mjs",
+      "sha256": "ED294C56D5B1B1C5263B9FCC0EE87F434EAD9F5A05B93C4A7E5EF5D666AFE31B",
+      "size": 8009
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
+      "sha256": "805CEB5A066477295CFB6AA9077944F1E562D23FE049B97D3911B7E40ED12D13",
+      "size": 1173
+    },
+    {
+      "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.sh",
+      "sha256": "641A441FEA11A9AC6CB86CED3106E045197641BAC072ECD1D91A11C0402F6FB5",
+      "size": 916
+    }
+  ],
+  "platform": "macos-arm64",
+  "product": "BesChannels AI Ops",
+  "published_at": "2026-09-12T17:35:34.727138Z",
+  "schema_version": 1,
+  "version": "0.1.0-candidate.29"
+}

@@ -1,12 +1,12 @@
 #!/bin/sh
-set -eu
+set -u
 
-version='0.1.0-candidate.28'
+version='0.1.0-candidate.29'
 channel='pilot'
-archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.28/releases/0.1.0-candidate.28/macos-arm64/beschannels-ai-ops-0.1.0-candidate.28-macos-arm64.zip'
-archive_sha256='7C84F8599968474EA316F0066CFDEBFEC4CDB131059E1376A3E64B5EE5FB6A57'
-manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.28/releases/0.1.0-candidate.28/macos-arm64/manifest.json'
-manifest_sha256='947C8DB575A57D83497BD14D71D83ACA01030AB87C5136A95DEE0354852D5CAE'
+archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/macos-arm64/beschannels-ai-ops-0.1.0-candidate.29-macos-arm64.zip'
+archive_sha256='E11CCBE22A05236DD4E857ED79D0B18B3039EB2BBA06E9027152B4E0A7E1764D'
+manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/macos-arm64/manifest.json'
+manifest_sha256='09186612A10AAAA2CF75F847D8B791F338BFF3DE508154269D8BFC45325EB1FC'
 case "$manifest_url" in
   */releases/*) signed_channel_base="${manifest_url%%/releases/*}/channels" ;;
   *)
@@ -30,10 +30,24 @@ staging="$temp_root/staging"
 curl -fL --retry 3 --connect-timeout 15 "$archive_url?sha=$archive_sha256" -o "$archive"
 curl -fL --retry 3 --connect-timeout 15 "$manifest_url?sha=$archive_sha256" -o "$manifest"
 
-actual_archive=$(shasum -a 256 "$archive" | awk '{print toupper($1)}')
-actual_manifest=$(shasum -a 256 "$manifest" | awk '{print toupper($1)}')
+sha256_file() {
+  python3 - "$1" <<'PY'
+import hashlib, sys
+try:
+    with open(sys.argv[1], "rb") as f:
+        h = hashlib.sha256()
+        for chunk in iter(lambda: f.read(1024 * 1024), b""): h.update(chunk)
+    print(h.hexdigest().upper())
+except OSError as e:
+    print("READ_ERROR: " + str(e), file=sys.stderr); raise SystemExit(10)
+except Exception as e:
+    print("TOOL_ERROR: " + str(e), file=sys.stderr); raise SystemExit(11)
+PY
+}
+actual_archive=$(sha256_file "$archive") || { printf '%s\n' '{"ok":false,"error":{"code":"hash_tool_or_read_failed","message":"安装包哈希工具或读文件失败。"}}'; exit 2; }
+actual_manifest=$(sha256_file "$manifest") || { printf '%s\n' '{"ok":false,"error":{"code":"hash_tool_or_read_failed","message":"发布清单哈希工具或读文件失败。"}}'; exit 2; }
 if [ "$actual_archive" != "$archive_sha256" ] || [ "$actual_manifest" != "$manifest_sha256" ]; then
-  printf '%s\n' '{"ok":false,"error":{"code":"hash_mismatch","message":"安装包或发布清单校验失败。"}}'
+  printf '%s\n' '{"ok":false,"error":{"code":"hash_mismatch","message":"安装包或发布清单哈希不匹配。"}}'
   exit 2
 fi
 
@@ -68,12 +82,11 @@ chmod 755 "$staging/bin/beschannels-ai" "$staging/skills/beschannels-ai-ops/scri
 mkdir -p "$install_root/versions" "$install_root/release-metadata" "$skill_root" "$HOME/.local/bin"
 target="$install_root/versions/$version"
 target_backup="$install_root/versions/.previous-$version"
-rm -rf "$target_backup"
+# 保留旧版本，直到 doctor 通过后再提交事务。
 if [ -d "$target" ]; then
   mv "$target" "$target_backup"
 fi
 mv "$staging" "$target"
-rm -rf "$target_backup"
 
 skill_stage="$skill_root/.beschannels-ai-ops-$version"
 rm -rf "$skill_stage"
@@ -119,7 +132,15 @@ exec "$version_root/bin/beschannels-ai" "$@"
 SH
 chmod 755 "$HOME/.local/bin/beschannels-ai"
 
-doctor=$($HOME/.local/bin/beschannels-ai doctor --output json)
-signed_check=$(BESCHANNELS_AI_RELEASE_BASE_URL="$signed_channel_base" "$HOME/.local/bin/beschannels-ai" update --channel "$channel" --output json)
-printf '%s\n' "$doctor"
-printf '%s\n' "$signed_check"
+doctor=''; channel_check=''; doctor_rc=0; channel_rc=0
+doctor=$($HOME/.local/bin/beschannels-ai doctor --output json 2>&1) || doctor_rc=$?
+printf '%s\n' "{\"installed\":{\"status\":\"installed\",\"exit_code\":0},\"doctor\":{\"status\":\"$([ "$doctor_rc" -eq 0 ] && echo passed || echo failed)\",\"exit_code\":$doctor_rc,\"output\":$([ -n "$doctor" ] && python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<<"$doctor" || echo null)}}"
+if [ "$doctor_rc" -ne 0 ]; then
+  rm -rf "$target"
+  if [ -d "$target_backup" ]; then mv "$target_backup" "$target"; fi
+  exit 2
+fi
+channel_check=$(BESCHANNELS_AI_RELEASE_BASE_URL="$signed_channel_base" "$HOME/.local/bin/beschannels-ai" update --channel "$channel" --output json 2>&1) || channel_rc=$?
+printf '%s\n' "{\"channel_check\":{\"status\":\"$([ "$channel_rc" -eq 0 ] && echo passed || echo failed)\",\"exit_code\":$channel_rc,\"output\":$([ -n "$channel_check" ] && python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<<"$channel_check" || echo null)}}"
+[ "$channel_rc" -eq 0 ] || exit 3
+rm -rf "$target_backup"

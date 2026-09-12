@@ -1,18 +1,18 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "7C84F8599968474EA316F0066CFDEBFEC4CDB131059E1376A3E64B5EE5FB6A57",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.28/releases/0.1.0-candidate.28/macos-arm64/beschannels-ai-ops-0.1.0-candidate.28-macos-arm64.zip",
+    "archive_sha256": "E11CCBE22A05236DD4E857ED79D0B18B3039EB2BBA06E9027152B4E0A7E1764D",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/macos-arm64/beschannels-ai-ops-0.1.0-candidate.29-macos-arm64.zip",
     "files": [
       {
         "path": "bin/beschannels-ai",
-        "sha256": "CFBF826FE8B89DBD30E2230A49F631B4DF898ADD36FB2B75BC1D993C87A70F70",
-        "size": 12361120
+        "sha256": "28C9A5D2907DB5F71FE6ECC31B57BCAFEC70AC97B6E07E3BC93A2FA2D92254CC",
+        "size": 12524048
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "379902340A7D0C897212662B59CF87DE97F254A14D1307FD6A7D752AB1AAE207",
-        "size": 11263
+        "sha256": "132288D3DD302F45A699467B49B4434D6FC7933100EAC79B65B720206928523B",
+        "size": 11264
       },
       {
         "path": "skills/beschannels-ai-ops/agents/openai.yaml",
@@ -71,8 +71,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/scripts/browser-frame.mjs",
-        "sha256": "7FB9A96FC47FDDF2AABF382021DC74EED1BFD7EE0DE00135F3240E1D4AD3B109",
-        "size": 7387
+        "sha256": "ED294C56D5B1B1C5263B9FCC0EE87F434EAD9F5A05B93C4A7E5EF5D666AFE31B",
+        "size": 8009
       },
       {
         "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
@@ -87,10 +87,10 @@
     ],
     "platform": "macos-arm64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-09-10T08:48:00.216209Z",
+    "published_at": "2026-09-12T17:35:34.727138Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.28"
+    "version": "0.1.0-candidate.29"
   },
   "schema_version": 1,
-  "signature": "NwFghWq3jdPFCgnfksduVnRAtoY7ZORdZKOd05AWzHjeA71E24fj4J1vqZQzvAL3guAN6eL9TwZhxJXvncc5CQ=="
+  "signature": "xzGvJoAQ6u93zXOasvP2NoT2mzIKGgul51JImUcB7NOC9Uy7e01Urzr6Lc008fExwLp6gnT8rQpRgJaDrDHaAw=="
 }

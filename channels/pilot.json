@@ -1,18 +1,18 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "AECB6456D3204AB409210B6AA7E108C3DE7885E79645ADD063BF54CB69A3E5FF",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.28/releases/0.1.0-candidate.28/beschannels-ai-ops-0.1.0-candidate.28-windows-x64.zip",
+    "archive_sha256": "DB17A1441589F586A43797BC515234C463637B7180906223EF02B8FE74D3ABA0",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/beschannels-ai-ops-0.1.0-candidate.29-windows-x64.zip",
     "files": [
       {
         "path": "bin/beschannels-ai.exe",
-        "sha256": "711BB9D80AC12F94454A5060B974E8774870C6AC33A14BD4E2BB16220812F6D7",
-        "size": 12998970
+        "sha256": "978B52179AFABA3C014240B44C427B32D8CC328DDEC94680654A22F5D6FF88AF",
+        "size": 13160470
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "ED836C8B1F46BDF61A0CA3DF3B52F84D3732D26CB272417F8264A2071EE51276",
-        "size": 11356
+        "sha256": "7B545DF79A45CBB07454CB0D512E494C60881399E23D2A13416C9AEF3246AEA9",
+        "size": 11358
       },
       {
         "path": "skills/beschannels-ai-ops/agents/openai.yaml",
@@ -71,8 +71,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/scripts/browser-frame.mjs",
-        "sha256": "C8BB05A4D9B43826D04535F440D6BDFDD2D9011FE2D5AB8C7FFABCC9412A516B",
-        "size": 7532
+        "sha256": "24E728C4777DF369500BD2A4DCD8C5C9D129CFEC808BF1CBCB1B33AA2D50F0C5",
+        "size": 8166
       },
       {
         "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.ps1",
@@ -87,10 +87,10 @@
     ],
     "platform": "windows-x64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-09-10T08:47:59.350590Z",
+    "published_at": "2026-09-12T17:35:33.815754Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.28"
+    "version": "0.1.0-candidate.29"
   },
   "schema_version": 1,
-  "signature": "oQR0AEeSO/ou8KsU+ZwM4cHTsGh93kX1zpzVw3auZDCx90opMuMhqi3ajsICFqxoR4OFJzqDdouXX0OXy4shDA=="
+  "signature": "kyXruk5tnMrBxI+uJZLWFhegi9tx/VJNZh+C72O+dSY/x5w4JPEFg+/kdlz6b6CWk/nhYW4oFQbvQkaxWNL7Dg=="
 }

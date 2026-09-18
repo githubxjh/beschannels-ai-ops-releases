@@ -1,12 +1,12 @@
 #!/bin/sh
 set -u
 
-version='0.1.0-candidate.29'
+version='0.1.0-candidate.32'
 channel='pilot'
-archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/macos-arm64/beschannels-ai-ops-0.1.0-candidate.29-macos-arm64.zip'
-archive_sha256='E11CCBE22A05236DD4E857ED79D0B18B3039EB2BBA06E9027152B4E0A7E1764D'
-manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/macos-arm64/manifest.json'
-manifest_sha256='09186612A10AAAA2CF75F847D8B791F338BFF3DE508154269D8BFC45325EB1FC'
+archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.32/releases/0.1.0-candidate.32/macos-arm64/beschannels-ai-ops-0.1.0-candidate.32-macos-arm64.zip'
+archive_sha256='72A1DBC3EBD8F226A4140EF2C8B028D525C6E540C91B588F2F2F6959883E67E0'
+manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.32/releases/0.1.0-candidate.32/macos-arm64/manifest.json'
+manifest_sha256='38340C5EA100BD479BBD5DB1911A60B6EEE861F7AB2751767AE2C217E5966DA1'
 case "$manifest_url" in
   */releases/*) signed_channel_base="${manifest_url%%/releases/*}/channels" ;;
   *)
@@ -73,7 +73,7 @@ for name, path in actual.items():
     row = expected[name]
     if path.stat().st_size != row["size"] or digest != row["sha256"]:
         raise SystemExit("release file hash mismatch")
-for required in ("bin/beschannels-ai", "skills/beschannels-ai-ops/SKILL.md"):
+for required in ("bin/beschannels-ai", "skills/beschannels-ai-ops/SKILL.md", "skills/beschannels-marketing-automation/SKILL.md"):
     if required not in actual:
         raise SystemExit("required release file missing")
 PY
@@ -97,6 +97,8 @@ if [ -d "$skill_root/beschannels-ai-ops" ]; then
   mv "$skill_root/beschannels-ai-ops" "$skill_backup"
 fi
 mv "$skill_stage" "$skill_root/beschannels-ai-ops"
+rm -rf "$skill_root/beschannels-marketing-automation"
+ditto "$target/skills/beschannels-marketing-automation" "$skill_root/beschannels-marketing-automation"
 
 python3 - "$install_root" "$version" "$archive_sha256" "$channel" <<'PY'
 import json, os, pathlib, sys, tempfile

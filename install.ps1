@@ -4,12 +4,12 @@ param()
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$Version = '0.1.0-candidate.29'
+$Version = '0.1.0-candidate.32'
 $Channel = 'pilot'
-$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/beschannels-ai-ops-0.1.0-candidate.29-windows-x64.zip'
-$ArchiveSha256 = 'DB17A1441589F586A43797BC515234C463637B7180906223EF02B8FE74D3ABA0'
-$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/manifest.json'
-$ManifestSha256 = 'C910F5FE13ED23A7A39D066EC47D03CC4B8512C5CB9AE62CA7488335D0ABEEA0'
+$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.32/releases/0.1.0-candidate.32/beschannels-ai-ops-0.1.0-candidate.32-windows-x64.zip'
+$ArchiveSha256 = '3E5B11AAD3AEA204139A549D185C71A3790218807E382564CC0F4D573D414F28'
+$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.32/releases/0.1.0-candidate.32/manifest.json'
+$ManifestSha256 = 'AAE5ED4355B0A08B512F481F170452D48A80954553FDD78364702090FFE90F0C'
 $SignedChannelBase = $ManifestUrl.Substring(0, $ManifestUrl.IndexOf('/releases/')) + '/channels'
 $InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
     [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)
@@ -31,7 +31,9 @@ $ExistingCurrentPath = Join-Path $InstallRoot 'current.json'
 if (Test-Path -LiteralPath $ExistingCurrentPath -PathType Leaf) {
     $existing = Get-Content -LiteralPath $ExistingCurrentPath -Raw -Encoding UTF8 | ConvertFrom-Json
     $existingExecutable = Join-Path $InstallRoot ([string]$existing.relative_path + '\bin\beschannels-ai.exe')
-    if (Test-Path -LiteralPath $existingExecutable -PathType Leaf) {
+    # Legacy runtimes cannot parse component manifests; migrate via the verified installer.
+    $ExistingComponents = Join-Path $InstallRoot ([string]$existing.relative_path + '\components.json')
+    if ((Test-Path -LiteralPath $existingExecutable -PathType Leaf) -and (Test-Path -LiteralPath $ExistingComponents -PathType Leaf)) {
         $oldReleaseBase = $env:BESCHANNELS_AI_RELEASE_BASE_URL
         try {
             $env:BESCHANNELS_AI_RELEASE_BASE_URL = $SignedChannelBase
@@ -178,6 +180,11 @@ try {
     [IO.Directory]::CreateDirectory($SkillRoot) | Out-Null
     $SkillTarget = Join-Path $SkillRoot 'beschannels-ai-ops'
     $SkillStaging = Join-Path $SkillRoot ('.beschannels-ai-ops-' + [guid]::NewGuid().ToString('N'))
+    $MarketingSkillTarget = Join-Path $SkillRoot 'beschannels-marketing-automation'
+    $MarketingStage = Join-Path $SkillRoot ('.marketing-' + [guid]::NewGuid().ToString('N'))
+    Copy-Item -LiteralPath (Join-Path $Target 'skills\beschannels-marketing-automation') -Destination $MarketingStage -Recurse
+    if (Test-Path -LiteralPath $MarketingSkillTarget) { Remove-Item -LiteralPath $MarketingSkillTarget -Recurse -Force }
+    [IO.Directory]::Move($MarketingStage, $MarketingSkillTarget)
     Copy-Item -LiteralPath (Join-Path $Target 'skills\beschannels-ai-ops') -Destination $SkillStaging -Recurse
     $SkillBackup = Join-Path $SkillRoot '.beschannels-ai-ops-previous'
     if (Test-Path -LiteralPath $SkillBackup) {

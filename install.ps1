@@ -4,12 +4,12 @@ param()
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$Version = '0.1.0-candidate.29'
+$Version = '0.1.0-candidate.30'
 $Channel = 'pilot'
-$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/beschannels-ai-ops-0.1.0-candidate.29-windows-x64.zip'
-$ArchiveSha256 = 'DB17A1441589F586A43797BC515234C463637B7180906223EF02B8FE74D3ABA0'
-$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.29/releases/0.1.0-candidate.29/manifest.json'
-$ManifestSha256 = 'C910F5FE13ED23A7A39D066EC47D03CC4B8512C5CB9AE62CA7488335D0ABEEA0'
+$ArchiveUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.30/releases/0.1.0-candidate.30/beschannels-ai-ops-0.1.0-candidate.30-windows-x64.zip'
+$ArchiveSha256 = '24E0366D0E34FD421B185E992FDA74FF22E7E266D4FFF7A61FE72F37E29DD407'
+$ManifestUrl = 'https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.30/releases/0.1.0-candidate.30/manifest.json'
+$ManifestSha256 = '9DFFA7ACDB46F002D54191801C05599B4AC214B595F34C301164FBCDACB0E613'
 $SignedChannelBase = $ManifestUrl.Substring(0, $ManifestUrl.IndexOf('/releases/')) + '/channels'
 $InstallRoot = if ($env:BESCHANNELS_AI_HOME) {
     [IO.Path]::GetFullPath($env:BESCHANNELS_AI_HOME)
@@ -178,6 +178,11 @@ try {
     [IO.Directory]::CreateDirectory($SkillRoot) | Out-Null
     $SkillTarget = Join-Path $SkillRoot 'beschannels-ai-ops'
     $SkillStaging = Join-Path $SkillRoot ('.beschannels-ai-ops-' + [guid]::NewGuid().ToString('N'))
+    $MarketingSkillTarget = Join-Path $SkillRoot 'beschannels-marketing-automation'
+    $MarketingStage = Join-Path $SkillRoot ('.marketing-' + [guid]::NewGuid().ToString('N'))
+    Copy-Item -LiteralPath (Join-Path $Target 'skills\beschannels-marketing-automation') -Destination $MarketingStage -Recurse
+    if (Test-Path -LiteralPath $MarketingSkillTarget) { Remove-Item -LiteralPath $MarketingSkillTarget -Recurse -Force }
+    [IO.Directory]::Move($MarketingStage, $MarketingSkillTarget)
     Copy-Item -LiteralPath (Join-Path $Target 'skills\beschannels-ai-ops') -Destination $SkillStaging -Recurse
     $SkillBackup = Join-Path $SkillRoot '.beschannels-ai-ops-previous'
     if (Test-Path -LiteralPath $SkillBackup) {

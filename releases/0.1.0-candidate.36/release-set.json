@@ -1,0 +1,142 @@
+{
+  "adopted_contracts": {
+    "adopted_ids": [
+      "RUNTIME-COMPANYOWNER-ACCOUNT-EMAIL",
+      "RUNTIME-CSV-CLEAN-NOT-IMPORT",
+      "RUNTIME-ENVIRONMENT-BINDING",
+      "RUNTIME-FORM-MATERIAL-GENERATION",
+      "RUNTIME-LIVE-OPTIONAL",
+      "RUNTIME-PRECONFIRM-RESOLUTION",
+      "RUNTIME-VISITOR-ACCEPTANCE-SEPARATION"
+    ],
+    "forbidden_ids": [
+      "RUNTIME-NO-COLLEAGUE-CLEANUP-LIST",
+      "RUNTIME-VISITOR-MANUAL-CONTINUATION"
+    ],
+    "path": "skills/beschannels-ai-ops/references/adopted-contracts.json",
+    "sha256": "149FFE379898AE653B770409A972B6569BDAF73A2F3B633896647D790A6D1C30",
+    "source_ledger_sha256": "11C0E1C088F432A4D4CE4303E4017AD902703D2A362CFF5799A2D001069A6DAB"
+  },
+  "channel": "pilot",
+  "files": [
+    {
+      "path": "channels/pilot-macos-arm64.json",
+      "sha256": "17943EEBF9285CC06679997850C8B29CCDF8FE44C1B9B13CA5A8845FE8461CE6",
+      "size": 10377
+    },
+    {
+      "path": "channels/pilot.json",
+      "sha256": "D9B03ADA19C29371AE4DD8899F5E6109B208FB7ECBB26BF1721E411A9B59B91D",
+      "size": 10370
+    },
+    {
+      "path": "install.ps1",
+      "sha256": "7FCDBFA8DBEA15548368C2278DD1D9178733CBE27AE9AF8C66E8B0B55A12C625",
+      "size": 11641
+    },
+    {
+      "path": "install.sh",
+      "sha256": "E1C524DEAECC7D3DBB93A1A8A668BF3C25E14446A68B8846B21CA08E0F3A885E",
+      "size": 7625
+    },
+    {
+      "path": "releases/0.1.0-candidate.36/SHA256SUMS.txt",
+      "sha256": "0B8FC8787B7260C7E7DFB9B27EFB016A9395C8B4357BF5A23955A9C2D3D60704",
+      "size": 200
+    },
+    {
+      "path": "releases/0.1.0-candidate.36/beschannels-ai-ops-0.1.0-candidate.36-windows-x64.zip",
+      "sha256": "20B92FA1C6254C85C219CE50B6F910784EE6F12CD787F65FD0A15D716C06678B",
+      "size": 14506438
+    },
+    {
+      "path": "releases/0.1.0-candidate.36/macos-arm64/SHA256SUMS.txt",
+      "sha256": "B0F7ED7048E441DDFF7D54494BB8A47805B723183A6FA83C9D44CF5829C4DC63",
+      "size": 200
+    },
+    {
+      "path": "releases/0.1.0-candidate.36/macos-arm64/beschannels-ai-ops-0.1.0-candidate.36-macos-arm64.zip",
+      "sha256": "082378FC64F6953EAD4725633678B8655E006469987C45E006CF4FD686F072D4",
+      "size": 14191304
+    },
+    {
+      "path": "releases/0.1.0-candidate.36/macos-arm64/manifest.json",
+      "sha256": "2916F17D3689679791E2887E99560E54AA60AC8B3DB5F04442E5E4EF1619D718",
+      "size": 9707
+    },
+    {
+      "path": "releases/0.1.0-candidate.36/macos-arm64/manifest.sig",
+      "sha256": "16EFC16C5EF07E9BBC90FA810FF04FB618FAC896E010422D586F37FC149765A3",
+      "size": 89
+    },
+    {
+      "path": "releases/0.1.0-candidate.36/manifest.json",
+      "sha256": "08B10EDF0BE55625BD358754BCD8CDE04568A359FFA484D4D1B9B57058621062",
+      "size": 9700
+    },
+    {
+      "path": "releases/0.1.0-candidate.36/manifest.sig",
+      "sha256": "1448495545D0BB6713C456E716BE4BD44027DB36C84C1D142F963DF34E258DAA",
+      "size": 89
+    }
+  ],
+  "platforms": [
+    {
+      "adopted_contracts": {
+        "adopted_ids": [
+          "RUNTIME-COMPANYOWNER-ACCOUNT-EMAIL",
+          "RUNTIME-CSV-CLEAN-NOT-IMPORT",
+          "RUNTIME-ENVIRONMENT-BINDING",
+          "RUNTIME-FORM-MATERIAL-GENERATION",
+          "RUNTIME-LIVE-OPTIONAL",
+          "RUNTIME-PRECONFIRM-RESOLUTION",
+          "RUNTIME-VISITOR-ACCEPTANCE-SEPARATION"
+        ],
+        "forbidden_ids": [
+          "RUNTIME-NO-COLLEAGUE-CLEANUP-LIST",
+          "RUNTIME-VISITOR-MANUAL-CONTINUATION"
+        ],
+        "path": "skills/beschannels-ai-ops/references/adopted-contracts.json",
+        "sha256": "149FFE379898AE653B770409A972B6569BDAF73A2F3B633896647D790A6D1C30",
+        "source_ledger_sha256": "11C0E1C088F432A4D4CE4303E4017AD902703D2A362CFF5799A2D001069A6DAB"
+      },
+      "archive_file": "releases/0.1.0-candidate.36/beschannels-ai-ops-0.1.0-candidate.36-windows-x64.zip",
+      "channel_file": "channels/pilot.json",
+      "manifest_file": "releases/0.1.0-candidate.36/manifest.json",
+      "platform": "windows-x64"
+    },
+    {
+      "adopted_contracts": {
+        "adopted_ids": [
+          "RUNTIME-COMPANYOWNER-ACCOUNT-EMAIL",
+          "RUNTIME-CSV-CLEAN-NOT-IMPORT",
+          "RUNTIME-ENVIRONMENT-BINDING",
+          "RUNTIME-FORM-MATERIAL-GENERATION",
+          "RUNTIME-LIVE-OPTIONAL",
+          "RUNTIME-PRECONFIRM-RESOLUTION",
+          "RUNTIME-VISITOR-ACCEPTANCE-SEPARATION"
+        ],
+        "forbidden_ids": [
+          "RUNTIME-NO-COLLEAGUE-CLEANUP-LIST",
+          "RUNTIME-VISITOR-MANUAL-CONTINUATION"
+        ],
+        "path": "skills/beschannels-ai-ops/references/adopted-contracts.json",
+        "sha256": "149FFE379898AE653B770409A972B6569BDAF73A2F3B633896647D790A6D1C30",
+        "source_ledger_sha256": "11C0E1C088F432A4D4CE4303E4017AD902703D2A362CFF5799A2D001069A6DAB"
+      },
+      "archive_file": "releases/0.1.0-candidate.36/macos-arm64/beschannels-ai-ops-0.1.0-candidate.36-macos-arm64.zip",
+      "channel_file": "channels/pilot-macos-arm64.json",
+      "manifest_file": "releases/0.1.0-candidate.36/macos-arm64/manifest.json",
+      "platform": "macos-arm64"
+    }
+  ],
+  "product": "BesChannels AI Ops",
+  "required_platforms": [
+    "windows-x64",
+    "macos-arm64"
+  ],
+  "schema_version": 1,
+  "sealed_at": "2026-11-22T15:49:18.600742Z",
+  "source_sha": "09a179c6f4dec90e1d1f3fc5366bcfa7b5679ced",
+  "version": "0.1.0-candidate.36"
+}

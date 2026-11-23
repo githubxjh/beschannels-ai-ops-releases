@@ -1,17 +1,17 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "20B92FA1C6254C85C219CE50B6F910784EE6F12CD787F65FD0A15D716C06678B",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.36/releases/0.1.0-candidate.36/beschannels-ai-ops-0.1.0-candidate.36-windows-x64.zip",
+    "archive_sha256": "543672E46F4D342D0B22784744E4AF940579C670746B7191D73E6E3A29E7680F",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.37/releases/0.1.0-candidate.37/beschannels-ai-ops-0.1.0-candidate.37-windows-x64.zip",
     "components": [
       {
-        "content_sha256": "EE23800D81E71962BE16C148AC2C6190565A0B20BA36EFD25344E26DE24D9D2C",
+        "content_sha256": "072832F12DB8A0826E56ACC017DE1326EC9E5640544F29FE3388E1D2DB1268D9",
         "lifecycle_status": "candidate_not_released",
         "path": "skills/beschannels-ai-ops",
         "runtime_compatibility": ">=0.1.0,<0.2.0",
         "schema_version": 1,
         "skill_id": "beschannels-ai-ops",
-        "version": "0.1.0-candidate.36"
+        "version": "0.1.0-candidate.37"
       },
       {
         "content_sha256": "000385F563A6FAE22E6865C83D5A38D0C11859C4A2ADBEB1F72296CE5D5038F2",
@@ -26,18 +26,18 @@
     "files": [
       {
         "path": "bin/beschannels-ai.exe",
-        "sha256": "234711B09BCDDCA6C9FEE66F05134E59EFFB2DFF8106B9FDF7511974288A8565",
-        "size": 14581505
+        "sha256": "013D33CDF8982B461C4BEA5DEF619C1B86138419376B346BC4E9FC9166299D05",
+        "size": 14581899
       },
       {
         "path": "components.json",
-        "sha256": "924DEE4E13CFBECA554D880E0914D3F6B08C4A4EB814FAC3089FD7459B9E03CC",
+        "sha256": "C525D18C77E29E554A4E64819EB5BE87BBAD5159434FB2A86F47966DD1743809",
         "size": 817
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "2B3643F238751148CB3CD9CF893C2DFB29D27E52207BF1A9F32E46B48F2E8CEF",
-        "size": 16267
+        "sha256": "222F86880ABD05C928B4951BAA4D713FF12BED44F2368C2292A93FCBBAAF12DA",
+        "size": 16313
       },
       {
         "path": "skills/beschannels-ai-ops/agents/openai.yaml",
@@ -46,7 +46,7 @@
       },
       {
         "path": "skills/beschannels-ai-ops/manifest.json",
-        "sha256": "1795D9CB0E1833D712EF9332D5B91CDC02A15E56E8E73514145D360A5B2A7FC3",
+        "sha256": "4D42AAE308B98A138387C494208D80E2A44955A3092BB2E069063E14CF2C73D2",
         "size": 197
       },
       {
@@ -56,8 +56,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-create.md",
-        "sha256": "31005ADA8E34D2A9135E6D848AF5D3D3D722C7636F6A5C67E5A900EF28B72C4F",
-        "size": 16932
+        "sha256": "51473E6F00689ED32C3C4FB1836BDFC86A78B3E88526B875E0CA4491F8E3D4AF",
+        "size": 16897
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/SKILL.md",
@@ -116,8 +116,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/capability-routing.md",
-        "sha256": "41225E7E86D86D99297D1E072438018848BD5E54592ECECDE3153A180198EF6E",
-        "size": 9963
+        "sha256": "E76407C4E4A7A00840C7D41EC3801B8FA626DF59B98F118121C677CE0289466C",
+        "size": 10008
       },
       {
         "path": "skills/beschannels-ai-ops/references/customer-memory.md",
@@ -146,8 +146,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/form-build.md",
-        "sha256": "163956CAA66E46994352E6A978431FA0E9647A210DC8181BE9F93BA0B4D39C4A",
-        "size": 12277
+        "sha256": "C77101CFF73C7206F43058814A6D6335B6D1626649E29ECDBBF59ADF5C2074FA",
+        "size": 13096
       },
       {
         "path": "skills/beschannels-ai-ops/references/form-taxonomy.md",
@@ -247,10 +247,10 @@
     ],
     "platform": "windows-x64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-11-22T15:49:17.383991Z",
+    "published_at": "2026-11-23T03:56:11.571279Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.36"
+    "version": "0.1.0-candidate.37"
   },
   "schema_version": 1,
-  "signature": "EhwcF9fSjX41b0TqcrSzOdxCiPnQwhzlchjAtGRMVne6rkAFh0mcCcCTb9mn+wHZ9K8iqxf0fqBv3QUVkuQTDw=="
+  "signature": "64iaRCZX2ra323UZXD3u1XRd/Oir6BEqu5aBSt9MmbdZ0VCfzqsngg+gpYqdvv+YJPU1vvsd1NdlFRGko3kGCg=="
 }

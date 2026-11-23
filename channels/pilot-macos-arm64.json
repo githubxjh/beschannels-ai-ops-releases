@@ -1,17 +1,17 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "A01FB8278B69DD6A0B64078DA079F73F49E9ACC9EDC8BEF28B5569A131E53152",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.37/releases/0.1.0-candidate.37/macos-arm64/beschannels-ai-ops-0.1.0-candidate.37-macos-arm64.zip",
+    "archive_sha256": "F52FEDDDE86081769F9FACE0D2EA94BBBE5A50D9CD9C6A0C94591A4B39E709A4",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.38/releases/0.1.0-candidate.38/macos-arm64/beschannels-ai-ops-0.1.0-candidate.38-macos-arm64.zip",
     "components": [
       {
-        "content_sha256": "072832F12DB8A0826E56ACC017DE1326EC9E5640544F29FE3388E1D2DB1268D9",
+        "content_sha256": "607ECBF279D4E117AF3A964A2F4F8635BA70AD6694B2F5E76551B4D5852E5BA3",
         "lifecycle_status": "candidate_not_released",
         "path": "skills/beschannels-ai-ops",
         "runtime_compatibility": ">=0.1.0,<0.2.0",
         "schema_version": 1,
         "skill_id": "beschannels-ai-ops",
-        "version": "0.1.0-candidate.37"
+        "version": "0.1.0-candidate.38"
       },
       {
         "content_sha256": "000385F563A6FAE22E6865C83D5A38D0C11859C4A2ADBEB1F72296CE5D5038F2",
@@ -26,18 +26,18 @@
     "files": [
       {
         "path": "bin/beschannels-ai",
-        "sha256": "87868D74E6DBF088E1EEC2DB19727F0DDAD3B2140341CB235405F817BA952B5C",
-        "size": 14226832
+        "sha256": "6C463DDAACFF66BAE0925B82B10EA5DB4DDA54A58912163A5BA330A08A2AB455",
+        "size": 14227440
       },
       {
         "path": "components.json",
-        "sha256": "EACF4633D6B37688518E25B89D6B2AC277A99187BB50DC2D1296E8950F2E9C43",
+        "sha256": "4E5F3DDFF798759D8EC951DBC007B544528CE37A49D82A412B49985CBDBDC157",
         "size": 793
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "50D0F3F73DE9C3C0A4EFE008D1F4BE87D34C8B81003D06AF706CCF7D3C2E5B50",
-        "size": 16207
+        "sha256": "F570DDB3155C988268D481A15AEF6474CE6EAFA39CBB04A14F5587357B0B8A7E",
+        "size": 16450
       },
       {
         "path": "skills/beschannels-ai-ops/agents/openai.yaml",
@@ -46,7 +46,7 @@
       },
       {
         "path": "skills/beschannels-ai-ops/manifest.json",
-        "sha256": "204AD62BE6FFCF8452F9A14899BE73CFBFF43D93FD2F93C14612E721483430D1",
+        "sha256": "F86869FFE19DBEF418CF95C28A1D94EA0B93A0A76BC34DCEC4BB434057F3E924",
         "size": 190
       },
       {
@@ -56,13 +56,13 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-create.md",
-        "sha256": "AB25C6CC947375EBDF767509767207D2AE0DDA58F4B42AA20DDAC061CF4FC5D3",
-        "size": 16768
+        "sha256": "EC3CDB874E731F9AB4E9E5B301D5B6C7D29D981C989632C350C81B4173D9717E",
+        "size": 25785
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/SKILL.md",
-        "sha256": "60D1893C569B4CD4177D7731753FCECC200D01C9E2D7F7D892F8465335F12A3D",
-        "size": 7546
+        "sha256": "11B7C847AF432CAD089FC1BC5BA4DD7667E744DF487082E249478E153C5097B9",
+        "size": 7848
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/agents/openai.yaml",
@@ -71,8 +71,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/references/confirmation-card.md",
-        "sha256": "212A3CDC47D22EBFFF9BBD988450E1D9A360A4E8119C750A6E7D935194C8FC98",
-        "size": 1492
+        "sha256": "AB7E61136FF9792799B51F27E8F846F69C8A649D2527463414D9A29FFC1EE9E0",
+        "size": 2482
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/references/field-inventory.md",
@@ -116,8 +116,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/capability-routing.md",
-        "sha256": "E9D42143CA2D3F11C3732C02DC9A85D6D4FB9DFF42052FE0FC2061834BB683C0",
-        "size": 9926
+        "sha256": "038729ED2CC6BE79DB955A6D5ED2E69C5B6C8959671E88B4725F1E4DE6C79796",
+        "size": 10080
       },
       {
         "path": "skills/beschannels-ai-ops/references/customer-memory.md",
@@ -146,8 +146,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/form-build.md",
-        "sha256": "B14A739195DC883E26F04BBCC5F10DEAE0D53DF9DD9FC2FF0D1F2E6560701E2B",
-        "size": 13016
+        "sha256": "FC1043E8D011EC7D15D7359FA44DEE64ADD8C7ACAA15F9DD9FFA5A6C771B660E",
+        "size": 14111
       },
       {
         "path": "skills/beschannels-ai-ops/references/form-taxonomy.md",
@@ -168,6 +168,11 @@
         "path": "skills/beschannels-ai-ops/references/material-page.md",
         "sha256": "98813DB61372B84391D6F694CF4ED3A709B86F8593DEF0E9BAD3EDD2881F29AA",
         "size": 37641
+      },
+      {
+        "path": "skills/beschannels-ai-ops/references/migration-tables.md",
+        "sha256": "A80A63B197042320965EB71F2A7D6E5A75A66A42C62EF167413D7CDD3BB379F0",
+        "size": 5592
       },
       {
         "path": "skills/beschannels-ai-ops/references/orientation.json",
@@ -247,10 +252,10 @@
     ],
     "platform": "macos-arm64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-11-23T03:56:12.751427Z",
+    "published_at": "2026-11-23T10:18:06.933341Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.37"
+    "version": "0.1.0-candidate.38"
   },
   "schema_version": 1,
-  "signature": "WL6uLPg1K0ygnGh8a0HH9k2VVnSf5werHJgrL+gc44iSy4TnINWNog7atjkvtf/4qrMjttKd70PgmT+th53ICA=="
+  "signature": "fuONnhTf4GVC2xTcuj/YcGUaXnjq+KyhIFWlgF543z3/UID5oeGz6vQUV2XzD05vXic0Bhuhlq04DH8ZUZGsBA=="
 }

@@ -1,12 +1,12 @@
 #!/bin/sh
 set -u
 
-version='0.1.0-candidate.38'
+version='0.1.0-candidate.39'
 channel='pilot'
-archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.38/releases/0.1.0-candidate.38/macos-arm64/beschannels-ai-ops-0.1.0-candidate.38-macos-arm64.zip'
-archive_sha256='F52FEDDDE86081769F9FACE0D2EA94BBBE5A50D9CD9C6A0C94591A4B39E709A4'
-manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.38/releases/0.1.0-candidate.38/macos-arm64/manifest.json'
-manifest_sha256='9AC9DFFA3E3B415ABF9851E7B9E0742509DB044B2E6804B5127FEA7219A12526'
+archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.39/releases/0.1.0-candidate.39/macos-arm64/beschannels-ai-ops-0.1.0-candidate.39-macos-arm64.zip'
+archive_sha256='EDF3AB32548B6BFF8310968928E31C4C32029B5E3F1B95391D033CF79332B4F7'
+manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.39/releases/0.1.0-candidate.39/macos-arm64/manifest.json'
+manifest_sha256='557EE59E83A08069B72AED5164D317BBAFEAEDBA8CEFE3066F455C18E31BF3D0'
 case "$manifest_url" in
   */releases/*) signed_channel_base="${manifest_url%%/releases/*}/channels" ;;
   *)
@@ -133,6 +133,12 @@ PY
 exec "$version_root/bin/beschannels-ai" "$@"
 SH
 chmod 755 "$HOME/.local/bin/beschannels-ai"
+
+# 把技能同步到本机其他助手（DeepSeek Harness、Claude Code 等）已存在的技能目录。离线；只写我们自己的两个技能文件夹，不创建不存在的助手目录。
+# 失败不拦安装，下面的 doctor 会如实报告哪个目录没更新。
+sync_rc=0
+skill_sync=$("$HOME/.local/bin/beschannels-ai" sync-skills --output json 2>&1) || sync_rc=$?
+printf '%s\n' "{\"skill_sync\":{\"status\":\"$([ "$sync_rc" -eq 0 ] && echo passed || echo failed)\",\"exit_code\":$sync_rc,\"output\":$([ -n "$skill_sync" ] && python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<<"$skill_sync" || echo null)}}"
 
 doctor=''; channel_check=''; doctor_rc=0; channel_rc=0
 doctor=$($HOME/.local/bin/beschannels-ai doctor --output json 2>&1) || doctor_rc=$?

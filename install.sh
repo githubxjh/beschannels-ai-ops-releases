@@ -1,12 +1,12 @@
 #!/bin/sh
 set -u
 
-version='0.1.0-candidate.38'
+version='0.1.0-candidate.40'
 channel='pilot'
-archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.38/releases/0.1.0-candidate.38/macos-arm64/beschannels-ai-ops-0.1.0-candidate.38-macos-arm64.zip'
-archive_sha256='F52FEDDDE86081769F9FACE0D2EA94BBBE5A50D9CD9C6A0C94591A4B39E709A4'
-manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.38/releases/0.1.0-candidate.38/macos-arm64/manifest.json'
-manifest_sha256='9AC9DFFA3E3B415ABF9851E7B9E0742509DB044B2E6804B5127FEA7219A12526'
+archive_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.40/releases/0.1.0-candidate.40/macos-arm64/beschannels-ai-ops-0.1.0-candidate.40-macos-arm64.zip'
+archive_sha256='8201B929AA757A1FCD4AB218F35672680C07F34802414A3B7C75C23B2493C2DE'
+manifest_url='https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.40/releases/0.1.0-candidate.40/macos-arm64/manifest.json'
+manifest_sha256='1790906EC169148A8ACC6466D829B80CCD03659A047DD70AE1831E53B035E91E'
 case "$manifest_url" in
   */releases/*) signed_channel_base="${manifest_url%%/releases/*}/channels" ;;
   *)
@@ -100,6 +100,21 @@ mv "$skill_stage" "$skill_root/beschannels-ai-ops"
 rm -rf "$skill_root/beschannels-marketing-automation"
 ditto "$target/skills/beschannels-marketing-automation" "$skill_root/beschannels-marketing-automation"
 
+# 把核对过哈希的发布清单存成与 update 相同格式的发布记录。sync-skills 和 doctor 要靠它重新核对已装版本的文件，没有它就会报 release_metadata_missing。先存记录，再切换 current.json。
+python3 - "$install_root" "$version" "$channel" "$manifest" <<'PY'
+import json, os, pathlib, sys, tempfile
+root = pathlib.Path(sys.argv[1])
+version, channel, manifest_file = sys.argv[2:]
+directory = root / "release-metadata"
+directory.mkdir(parents=True, exist_ok=True)
+record = {"schema_version": 1, "channel": channel, "manifest": json.loads(pathlib.Path(manifest_file).read_text(encoding="utf-8"))}
+fd, temp = tempfile.mkstemp(prefix=".record.", suffix=".tmp", dir=directory)
+with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as stream:
+    json.dump(record, stream, ensure_ascii=False, sort_keys=True, indent=2)
+    stream.write("\n")
+os.replace(temp, directory / f"{version}.json")
+PY
+
 python3 - "$install_root" "$version" "$archive_sha256" "$channel" <<'PY'
 import json, os, pathlib, sys, tempfile
 root = pathlib.Path(sys.argv[1])
@@ -133,6 +148,12 @@ PY
 exec "$version_root/bin/beschannels-ai" "$@"
 SH
 chmod 755 "$HOME/.local/bin/beschannels-ai"
+
+# 把技能同步到本机其他助手（DeepSeek Harness、Claude Code 等）已存在的技能目录。离线；只写我们自己的两个技能文件夹，不创建不存在的助手目录。
+# 失败不拦安装，下面的 doctor 会如实报告哪个目录没更新。
+sync_rc=0
+skill_sync=$("$HOME/.local/bin/beschannels-ai" sync-skills --output json 2>&1) || sync_rc=$?
+printf '%s\n' "{\"skill_sync\":{\"status\":\"$([ "$sync_rc" -eq 0 ] && echo passed || echo failed)\",\"exit_code\":$sync_rc,\"output\":$([ -n "$skill_sync" ] && python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<<"$skill_sync" || echo null)}}"
 
 doctor=''; channel_check=''; doctor_rc=0; channel_rc=0
 doctor=$($HOME/.local/bin/beschannels-ai doctor --output json 2>&1) || doctor_rc=$?

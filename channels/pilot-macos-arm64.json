@@ -1,17 +1,17 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "F52FEDDDE86081769F9FACE0D2EA94BBBE5A50D9CD9C6A0C94591A4B39E709A4",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.38/releases/0.1.0-candidate.38/macos-arm64/beschannels-ai-ops-0.1.0-candidate.38-macos-arm64.zip",
+    "archive_sha256": "8201B929AA757A1FCD4AB218F35672680C07F34802414A3B7C75C23B2493C2DE",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.40/releases/0.1.0-candidate.40/macos-arm64/beschannels-ai-ops-0.1.0-candidate.40-macos-arm64.zip",
     "components": [
       {
-        "content_sha256": "607ECBF279D4E117AF3A964A2F4F8635BA70AD6694B2F5E76551B4D5852E5BA3",
+        "content_sha256": "15B3F7EE6FC06C5F0D07CAF95138FE9D2406F9E30798A8958750AA72C9AF6029",
         "lifecycle_status": "candidate_not_released",
         "path": "skills/beschannels-ai-ops",
         "runtime_compatibility": ">=0.1.0,<0.2.0",
         "schema_version": 1,
         "skill_id": "beschannels-ai-ops",
-        "version": "0.1.0-candidate.38"
+        "version": "0.1.0-candidate.40"
       },
       {
         "content_sha256": "000385F563A6FAE22E6865C83D5A38D0C11859C4A2ADBEB1F72296CE5D5038F2",
@@ -26,18 +26,18 @@
     "files": [
       {
         "path": "bin/beschannels-ai",
-        "sha256": "6C463DDAACFF66BAE0925B82B10EA5DB4DDA54A58912163A5BA330A08A2AB455",
-        "size": 14227440
+        "sha256": "F471406E29CD6E749C28D6F9B504408F1EB093C6F31B0C199378C068DA312F55",
+        "size": 14235472
       },
       {
         "path": "components.json",
-        "sha256": "4E5F3DDFF798759D8EC951DBC007B544528CE37A49D82A412B49985CBDBDC157",
+        "sha256": "DBE6F5059527B136EFD69408EE3A8C2748495A312F0CA733BD4D9D1ADE1EE090",
         "size": 793
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "F570DDB3155C988268D481A15AEF6474CE6EAFA39CBB04A14F5587357B0B8A7E",
-        "size": 16450
+        "sha256": "3CEA00BF7763958530FF96344B9F2548E30952D16113D6EBE2E2DAB2C5332B1C",
+        "size": 17855
       },
       {
         "path": "skills/beschannels-ai-ops/agents/openai.yaml",
@@ -46,7 +46,7 @@
       },
       {
         "path": "skills/beschannels-ai-ops/manifest.json",
-        "sha256": "F86869FFE19DBEF418CF95C28A1D94EA0B93A0A76BC34DCEC4BB434057F3E924",
+        "sha256": "45DC263A91BA277E070B8B5732E103936A5D135043508BF86DFE9431A87E3EF4",
         "size": 190
       },
       {
@@ -56,8 +56,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-create.md",
-        "sha256": "EC3CDB874E731F9AB4E9E5B301D5B6C7D29D981C989632C350C81B4173D9717E",
-        "size": 25785
+        "sha256": "5DEA9DFA2895570523629BECF4F7AC40BDA381DC093A77B1AD7D34DE24490A3F",
+        "size": 29027
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/SKILL.md",
@@ -146,8 +146,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/form-build.md",
-        "sha256": "FC1043E8D011EC7D15D7359FA44DEE64ADD8C7ACAA15F9DD9FFA5A6C771B660E",
-        "size": 14111
+        "sha256": "8C6022FEBC92A7F6806D04ED4802F39611CF8999AE3FCD769C3938402D952441",
+        "size": 15371
       },
       {
         "path": "skills/beschannels-ai-ops/references/form-taxonomy.md",
@@ -171,8 +171,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/migration-tables.md",
-        "sha256": "A80A63B197042320965EB71F2A7D6E5A75A66A42C62EF167413D7CDD3BB379F0",
-        "size": 5592
+        "sha256": "60413EC7B0546804C11B6E267F645F45CB4F1B1245FFB1CEF57C5C616D81D13F",
+        "size": 7955
       },
       {
         "path": "skills/beschannels-ai-ops/references/orientation.json",
@@ -181,8 +181,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/runtime-contract.md",
-        "sha256": "01D98B09BF3BC48E155DDBF5B0C98D6301E98AD81CB9895B719FF1BC5A1D19EB",
-        "size": 9975
+        "sha256": "C4614C8695BABF3BD9980D55E2C7862984A92CC87E65357B9D28C214231C4758",
+        "size": 14044
       },
       {
         "path": "skills/beschannels-ai-ops/references/tag-rule-creation.md",
@@ -208,6 +208,36 @@
         "path": "skills/beschannels-ai-ops/scripts/invoke-runtime.sh",
         "sha256": "641A441FEA11A9AC6CB86CED3106E045197641BAC072ECD1D91A11C0402F6FB5",
         "size": 916
+      },
+      {
+        "path": "skills/beschannels-ai-ops/templates/README.md",
+        "sha256": "AEDCE951E584A90070CF0209F47E0716DEF427C4B71FBB72C0081C27023ACBB7",
+        "size": 1764
+      },
+      {
+        "path": "skills/beschannels-ai-ops/templates/activity-spec.csv",
+        "sha256": "C1879D69C359582DB6F6F06676C7E287D3FCA8C4237BCBB4BAFF9B4628DA7153",
+        "size": 5328
+      },
+      {
+        "path": "skills/beschannels-ai-ops/templates/activity-spec.xlsx",
+        "sha256": "0CCD57466A5D41AF14AD9C1F22C8E67DA2C89BC8E518AA523D0C2F13FFBFBAFD",
+        "size": 33329
+      },
+      {
+        "path": "skills/beschannels-ai-ops/templates/migration-map.csv",
+        "sha256": "9306031B0CCD495371D7FFE64638C7D91E3E204D0C845035879971EC8D66AF86",
+        "size": 140
+      },
+      {
+        "path": "skills/beschannels-ai-ops/templates/migration-map.xlsx",
+        "sha256": "3AB6BAAE1FCD2C9F547F7B691A0ABD221CDF29DE5A0C57EB90096AF4D5A74603",
+        "size": 14810
+      },
+      {
+        "path": "skills/beschannels-ai-ops/templates/template-spec.json",
+        "sha256": "F6F97222306F4BF739F17A56939E5FAA4846E657F8A4F999C2D1CD3A8E1CF4D3",
+        "size": 15363
       },
       {
         "path": "skills/beschannels-marketing-automation/SKILL.md",
@@ -252,10 +282,10 @@
     ],
     "platform": "macos-arm64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-11-23T10:18:06.933341Z",
+    "published_at": "2026-11-24T07:59:45.973866Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.38"
+    "version": "0.1.0-candidate.40"
   },
   "schema_version": 1,
-  "signature": "fuONnhTf4GVC2xTcuj/YcGUaXnjq+KyhIFWlgF543z3/UID5oeGz6vQUV2XzD05vXic0Bhuhlq04DH8ZUZGsBA=="
+  "signature": "uH/tX2ov0M8sq0Dc8nnOC4jY39zwD3oI+ZsZwwZUKl2WRcsPM4NGJYzAHLWMoLKssaYa3s2UP9L80ngCGjmNDA=="
 }

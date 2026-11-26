@@ -1,17 +1,17 @@
 {
   "channel": "pilot",
   "manifest": {
-    "archive_sha256": "E2CB55EB50AFC81F64D2A42FE17848AA2205C72B4C84D422F3EE3DD688C06FD6",
-    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.40/releases/0.1.0-candidate.40/beschannels-ai-ops-0.1.0-candidate.40-windows-x64.zip",
+    "archive_sha256": "0858792A6B50F1AE917DDB2568997A7884B77D44BE82D9F4E2F824BCB64CDF0C",
+    "archive_url": "https://raw.githubusercontent.com/githubxjh/beschannels-ai-ops-releases/v0.1.0-candidate.42/releases/0.1.0-candidate.42/beschannels-ai-ops-0.1.0-candidate.42-windows-x64.zip",
     "components": [
       {
-        "content_sha256": "15B3F7EE6FC06C5F0D07CAF95138FE9D2406F9E30798A8958750AA72C9AF6029",
+        "content_sha256": "BCC0372E8DA2714542C386177339BCF71FB99A82C639C1F0CBF8D563CAD3719E",
         "lifecycle_status": "candidate_not_released",
         "path": "skills/beschannels-ai-ops",
         "runtime_compatibility": ">=0.1.0,<0.2.0",
         "schema_version": 1,
         "skill_id": "beschannels-ai-ops",
-        "version": "0.1.0-candidate.40"
+        "version": "0.1.0-candidate.42"
       },
       {
         "content_sha256": "000385F563A6FAE22E6865C83D5A38D0C11859C4A2ADBEB1F72296CE5D5038F2",
@@ -26,27 +26,27 @@
     "files": [
       {
         "path": "bin/beschannels-ai.exe",
-        "sha256": "3DB683AFF61E525B0F9FB7373445B34609762AC527B9D71804E0E9CD5F2A5765",
-        "size": 14589552
+        "sha256": "EE4C74C360D2F18D8BF43EEB430CC6FFE94FCEC864EABE92BCE7C28276F79676",
+        "size": 14589382
       },
       {
         "path": "components.json",
-        "sha256": "7E0C1A7DD12BC8B79918E3587D29F2687C538744A363D5F9A44D4430D59E7FE9",
+        "sha256": "ABF3D207967E0DBE57F58E1FB42E7DAC0312E1DA77664E64AA135C4649CBEAFD",
         "size": 817
       },
       {
         "path": "skills/beschannels-ai-ops/SKILL.md",
-        "sha256": "8F49658A73BE3773510F40C4AA7440B3362678F5759E918A3217CEFD0A55D430",
-        "size": 17967
+        "sha256": "133611BF1BDBB3A7F7C266AC73173A95B0B370DE3999FD19812DF1C465752E8D",
+        "size": 23144
       },
       {
         "path": "skills/beschannels-ai-ops/agents/openai.yaml",
-        "sha256": "E415B56CF44945006373C0604DD3F399DBE35BF901EC83AFC5C388ECCA2989E8",
-        "size": 434
+        "sha256": "0B9DF869E30D687069C9441C048C40F7C69790530EAD1DE44A4B8175916F24EC",
+        "size": 487
       },
       {
         "path": "skills/beschannels-ai-ops/manifest.json",
-        "sha256": "053276AC17981AACFFFD757739802DA3A2B6EB5FD121F4AAC23D2FB8CF7A7EDF",
+        "sha256": "7BB216E33C60162C7762639CEC66679035E33553FB0A9542D601F3D54111CDE5",
         "size": 197
       },
       {
@@ -56,13 +56,13 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-create.md",
-        "sha256": "04AF52B79068F0E9B48BDEC5E753815528456BB9C47483FF317B76837046367C",
-        "size": 29166
+        "sha256": "BBCB4CE15CDC6DE65C2020BC8CA255EF2400F9A71C2F5D0C2217FAD095AB164F",
+        "size": 40322
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/SKILL.md",
-        "sha256": "93C463343F4C32CBBF25B2E00AB06730BC3F03E66A1770070C9F59AB47C16E92",
-        "size": 7958
+        "sha256": "5AD74F85256A68BC0D754077D4BE3C0DE3A4520DD0851A6F06D61EF47DB2A3E6",
+        "size": 8592
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/agents/openai.yaml",
@@ -71,8 +71,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/references/confirmation-card.md",
-        "sha256": "7B7E607A483402A42AD41B723FDFEB2C18937B5E64109174C783CBD9754C40A7",
-        "size": 2530
+        "sha256": "853A0613606890E78C00DBA2D8A2AD2CA3302B181DE2843B9513CDFE8524B31E",
+        "size": 3297
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/references/field-inventory.md",
@@ -91,8 +91,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/references/recovery-contract.md",
-        "sha256": "FB167BB9699CD9D3A714ECD9C08B27924225857629B82D124A45AE84E119CB29",
-        "size": 2220
+        "sha256": "44DA330AD268170F16E18A50CDA511E74D6E98547C3087F1A94A5ABBEF1AC00E",
+        "size": 2345
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/references/result-card.md",
@@ -101,8 +101,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/activity-meeting/references/stop-conditions.md",
-        "sha256": "57D782E2EE5184F6391E63849356949D4C2515ED2500DB0C41CDB1B6A467CEB7",
-        "size": 1156
+        "sha256": "4BF42C76D8DE232C10A18B72D209C93683DE362DD7F664226D4922BAC3933E98",
+        "size": 1335
       },
       {
         "path": "skills/beschannels-ai-ops/references/adopted-contracts.json",
@@ -116,8 +116,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/capability-routing.md",
-        "sha256": "3FAE42E3725612D484C9025C94BB83E7B2365CFA8F4387E19B7148A829D2957B",
-        "size": 10162
+        "sha256": "D23FB1828C39263C2A11CC94DCDAB90968D6C0284583AE20BB6680C7F7327A65",
+        "size": 10893
       },
       {
         "path": "skills/beschannels-ai-ops/references/customer-memory.md",
@@ -146,13 +146,13 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/form-build.md",
-        "sha256": "ED8D923333FA2F063AB7D8339587053F282163BCA196D37D639EDA15177CA40D",
-        "size": 15452
+        "sha256": "2D96ACBF2CA0DFBD5E4F46347649260185D7AB94E9C9F10C057034F641978340",
+        "size": 21412
       },
       {
         "path": "skills/beschannels-ai-ops/references/form-taxonomy.md",
-        "sha256": "41512D8611769A8BDA4A7D617AA4C15AF4AFA5CA4A56869CC019ECC5E9A97D42",
-        "size": 3732
+        "sha256": "35A6B0C35F385B8DDEEDC19D0FD55735E5640BE48D1A77E1FD8526F3F31AA971",
+        "size": 3953
       },
       {
         "path": "skills/beschannels-ai-ops/references/import-reminders.md",
@@ -171,8 +171,8 @@
       },
       {
         "path": "skills/beschannels-ai-ops/references/migration-tables.md",
-        "sha256": "B5108C9FA79C3E1CE147EF34ED3CD1CD708020FDB2179E8168748741BA8238D3",
-        "size": 8018
+        "sha256": "D1E2F2E6B8CE5E4896536A1A648D3515294CD6B5EC2BF52D1C26E3566186F7EF",
+        "size": 9648
       },
       {
         "path": "skills/beschannels-ai-ops/references/orientation.json",
@@ -211,18 +211,18 @@
       },
       {
         "path": "skills/beschannels-ai-ops/templates/README.md",
-        "sha256": "7A96731ED15B5D059A1DACD2B45B4F92D37127E54A1CABA5AB67C88584A9995B",
-        "size": 1783
+        "sha256": "0830B2053C72073A95DCE2850023F0965925CCBCD0FC285802E788F5A5266E41",
+        "size": 1928
       },
       {
         "path": "skills/beschannels-ai-ops/templates/activity-spec.csv",
-        "sha256": "C1879D69C359582DB6F6F06676C7E287D3FCA8C4237BCBB4BAFF9B4628DA7153",
-        "size": 5328
+        "sha256": "B2F2A232C223B4359BFA7D7E28BD2F73971774A176A1D5E4082985300FE9581F",
+        "size": 5424
       },
       {
         "path": "skills/beschannels-ai-ops/templates/activity-spec.xlsx",
-        "sha256": "0CCD57466A5D41AF14AD9C1F22C8E67DA2C89BC8E518AA523D0C2F13FFBFBAFD",
-        "size": 33329
+        "sha256": "BB21A918DE9472DF3FFB097DEE52B99AA1EF64A8F9F3E509AC582B3731B0249F",
+        "size": 33785
       },
       {
         "path": "skills/beschannels-ai-ops/templates/migration-map.csv",
@@ -231,13 +231,13 @@
       },
       {
         "path": "skills/beschannels-ai-ops/templates/migration-map.xlsx",
-        "sha256": "3AB6BAAE1FCD2C9F547F7B691A0ABD221CDF29DE5A0C57EB90096AF4D5A74603",
-        "size": 14810
+        "sha256": "4DE287B63806344BC2A6037D56C7E4804AD1AD9462909E0D0739F51DFE148C33",
+        "size": 15224
       },
       {
         "path": "skills/beschannels-ai-ops/templates/template-spec.json",
-        "sha256": "9D9A8154683F3C524FFD92C61AB66B0F3E428753B9BD99866F7843A08E1FB79F",
-        "size": 15463
+        "sha256": "DF20A98CC91014E3A0D9DE79E104DC82726C9156E0A843D8810848C6BF02A50A",
+        "size": 16333
       },
       {
         "path": "skills/beschannels-marketing-automation/SKILL.md",
@@ -282,10 +282,10 @@
     ],
     "platform": "windows-x64",
     "product": "BesChannels AI Ops",
-    "published_at": "2026-11-24T07:59:44.893547Z",
+    "published_at": "2026-11-26T16:16:19.443106Z",
     "schema_version": 1,
-    "version": "0.1.0-candidate.40"
+    "version": "0.1.0-candidate.42"
   },
   "schema_version": 1,
-  "signature": "yBeuCI162vFVAYWnSsRBUPRr6SRXA+Ma82BcrEaON7Q6aWXsHgfl4BiVvDmNONXAcg+Ak+KHtgahzaClIbVkDA=="
+  "signature": "uzchSflx+VCXvI6/Jixi2+FUqeggSMMDAaazp1Upsza4XzAujEpqEdeRRFFPdFNWFcRoVHHirF9b+pHlJbL8Cw=="
 }
